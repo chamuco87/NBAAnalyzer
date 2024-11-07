@@ -19,19 +19,41 @@ const { Console } = require('console');
         ).build()
 
     try {
-        await LogIn();
+        //await LogIn();
         //await getTableData("/leagues/" ,"stats", "BaseData");
         //await getSeasonsPerYear();
         //await getSchedulesPerYear();
-        await getGamesPerYear();
+        //await getGamesPerYear();
 
-        // var years = ["2023-24"];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
+        // var years = [2024, 2023, 2022];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     await prepareData(yearTo);
         //     await formatGamesPerTeam(yearTo);
         //     await generateAverages(yearTo);
         // }
+
+
+        // var years = [2023];//[2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000];
+        // for (let index = 0; index < years.length; index++) {
+        //     const yearTo = years[index];
+        //     var toBeEvaluated = false;
+        //     await generateMLRecords(yearTo, toBeEvaluated);
+        // }
+        // var MLData = [];
+        // for (let index = 0; index < years.length; index++) {
+        //     const yearTo = years[index];
+        //     var data = await load(yearTo + "MLData", "AnalysisData")
+        //     MLData = MLData.concat(data);
+        //     await save("MLData", MLData, function () { }, "replace", "AnalysisData")
+        // }
+
+        var years = [2024];
+        for (let index = 0; index < years.length; index++) {
+            const yearTo = years[index];
+            var toBeEvaluated = true;
+            await generateMLRecords(yearTo, toBeEvaluated);
+        }
 
     }
     catch (Ex) {
@@ -64,16 +86,459 @@ const { Console } = require('console');
         await driver.wait(until.elementIsVisible(loadElement), 10000);
     }
 
-    async function formatGamesPerTeam(yearToProcess) 
+    async function generateMLRecords(yearToProcess, toBeEvaluated) 
     {
+        try {
+            if (!toBeEvaluated) {
+                var MLData = []; //await load(yearToProcess+"MLData", "AnalysisData");
+            } else {
+                var MLData = await load(yearToProcess + "MLDataToEvaluate", "AnalysisData");
+            }
+        }
+        catch {
+            var MLData = [];
+        }
+
+
+        var years = await load("years", "BaseData");
+
+        for (let index = 0; index < years.length; index++) {
+            const year = years[index];
+
+            var isYear = parseInt(year.season.split("-")[0]);
+            if (!isNaN(isYear) && isYear == yearToProcess) {
+                var teamsE = await load("schedules_confs_standings_E", year.season);
+                var teamsW = await load("schedules_confs_standings_W", year.season);
+                var teams = teamsE.concat(teamsW);
+                for (let df = 0; df < teams.length; df++) {
+                    const team = teams[df];
+                    var school_name = team.team_nameLink.split("/")[2].replace(" ","_");
+                    var schedules = await load("schedules_games_" + team.team_nameLink.split('/')[2], year.season);
+
+                    if(schedules.length > 0 && isYear != 2024 && isYear == yearToProcess){
+                        for (let rat = (schedules.length-1); rat >= 0; rat--) {
+                            const schedule = schedules[rat];
+                            var schedule_name = formatDateString(schedule.date_game).replace(" ","_").replace(" ","_").replace(",","");
+                            var gameRecords = [];
+                            var gameResults = [];
+                            var averageRecords = [];
+                            try{
+                                gameRecords = await load("gameRecords","AnalysisData/" + isYear);
+                                gameResults = await load("formatedRecords","AnalysisData/" + isYear);
+                                averageRecords = await load("averageRecords","AnalysisData/" + isYear);
+
+                                var gameRecord = gameRecords.filter(function(item){return (item.homeTeam == school_name || item.awayTeam == school_name) && item.date == schedule_name});
+                                var opponentName = gameRecord[0].homeTeam == school_name ? gameRecord[0].awayTeam : gameRecord[0].homeTeam;
+                                var selectedAverage = averageRecords.filter(function(item){return item.team == school_name && item.date == schedule_name});
+                                var opponentAverage = averageRecords.filter(function(item){return item.team == opponentName && item.date == schedule_name});
+                                var selectedGameResults = gameResults.filter(function(item){return item.team == school_name});
+                                var selectedIndex = selectedGameResults.findIndex(x =>x.date == schedule_name);
+                                if(selectedIndex > 0)
+                                {
+                                    var selectedGameResult = selectedGameResults[selectedIndex-1];
+                                }
+                                else{
+                                    try{
+                                        gameResults = await load("formatedRecords","AnalysisData/" + (isYear-1));
+                                        var selectedGameResults = gameResults.filter(function(item){return item.team == school_name});
+                                        var selectedGameResult = selectedGameResults[selectedGameResults.length-1];
+                                    }
+                                    catch{
+                                        var selectedGameResult = null;
+                                        var stopHere = "";
+                                    }
+                                }
+                                if(selectedAverage[0].defAllowedFirstDowns == 0 && selectedAverage[0].offenseFirstDowns == 0)
+                                {
+                                    try{
+                                        var arr = [];
+                                        averageRecords = await load("averageRecords","AnalysisData/" + (isYear-1));
+                                        var selectedAverage = averageRecords.filter(function(item){return item.team == school_name});
+                                        var selectedAvg = selectedAverage[selectedAverage.length-1];
+                                        arr.push(selectedAvg);
+                                        selectedAverage = arr;
+                                    }
+                                    catch{
+                                        var selectedAverage = [];
+                                    }
+                                    var stopHere = "";
+                                    //todo
+                                }
+                                var opponentGameResults = gameResults.filter(function(item){return item.team == opponentName});
+                                var opponentIndex = opponentGameResults.findIndex(x =>x.date == schedule_name);
+                                if(opponentIndex > 0)
+                                {
+                                    var opponentGameResult = opponentGameResults[opponentIndex-1];
+                                }
+                                else{
+                                    try{
+                                        gameResults = await load("formatedRecords","AnalysisData/" + (isYear-1));
+                                        var opponentGameResults = gameResults.filter(function(item){return item.team == opponentName});
+                                        var opponentGameResult = opponentGameResults[opponentGameResults.length-1];
+                                    }
+                                    catch{
+                                        var opponentGameResult = null;
+                                        var stopHere = "";
+                                    }
+                                    
+                                }
+                                if(opponentAverage[0].defAllowedFirstDowns == 0 && opponentAverage[0].offenseFirstDowns == 0)
+                                {
+                                    try{
+                                        var arr = [];
+                                        averageRecords = await load("averageRecords","AnalysisData/" + (isYear-1));
+                                        var opponentAverage = averageRecords.filter(function(item){return item.team == opponentName});
+                                        var opponentAvg = opponentAverage[opponentAverage.length-1];
+                                        arr.push(opponentAvg);
+                                        opponentAverage = arr;
+                                    }
+                                    catch{
+                                        var opponentAverage = [];
+                                    }
+                                    var stopHere = "";
+                                    //todo
+                                }
+                                
+                            if(gameRecord.length > 0 && selectedAverage.length > 0 && selectedGameResult && opponentAverage.length > 0 && opponentGameResult)
+                            {
+                                var MLRecord = {};
+                                MLRecord.key = gameRecord[0].key;
+                                MLRecord.date = gameRecord[0].date;
+                                
+                                MLRecord.homeTeam = gameRecord[0].homeTeam;
+                                MLRecord.awayTeam = gameRecord[0].awayTeam;
+                                // var homeRecords = gameRecord[0].homeTeam == selectedGameResult.team ? selectedGameResult : opponentGameResult;
+                                // MLRecord = appendProperties(MLRecord, homeRecords, "home");
+                                // var awayRecords = gameRecord[0].awayTeam == opponentGameResult.team ? opponentGameResult : selectedGameResult;
+                                // MLRecord = appendProperties(MLRecord, awayRecords, "away");
+                                var homeAverageRecords = gameRecord[0].homeTeam == selectedAverage[0].team ? selectedAverage[0] : opponentAverage[0];
+                                MLRecord = appendProperties(MLRecord, homeAverageRecords, "homeAvg");
+                                var awayAverageRecords = gameRecord[0].awayTeam == opponentAverage[0].team ? opponentAverage[0] : selectedAverage[0];
+                                MLRecord = appendProperties(MLRecord, awayAverageRecords, "awayAvg");
+
+                                if(!toBeEvaluated){
+                                    MLRecord.isHomeWinner = gameRecord[0].isHomeWinner;
+                                    MLRecord.scoreDiff = gameRecord[0].scoreDiff;
+                                    MLRecord.totalPoints = gameRecord[0].totalPoints;
+                                }
+                                else{
+                                    MLRecord.isHomeWinner = 0;
+                                    MLRecord.scoreDiff = 0;
+                                    MLRecord.totalPoints = 0;
+                                    // MLRecord.awayAvgDefAllowedPoints = 0;
+                                    // MLRecord.awayAvgOffensePoints = 0;
+                                    // MLRecord.homeAvgDefAllowedPoints = 0;
+                                    // MLRecord.homeAvgOffensePoints = 0;
+                                }
+                                if(MLRecord.homeAvgOffenseTotalYD  == 0 || MLRecord.awayAvgOffenseTotalYD  == 0){
+                                var stopHere = ""
+                                }
+                                var isThere = MLData.filter(function(item){return item.key == MLRecord.key });
+                                if(isThere.length == 0){
+                                    MLData.push(MLRecord);
+                                    if(!toBeEvaluated){
+                                        await save(yearToProcess+"MLData",MLData, function(){}, "replace" ,"AnalysisData");
+                                    }
+                                    else{
+                                        await save(yearToProcess+"MLDataToEvaluate",MLData, function(){}, "replace" ,"AnalysisData");
+                                    }
+                                }
+                            }
+                            }
+                            catch(Ex){
+                                
+                            }
+                            
+                        }
+                    }
+                    else{
+                        for (let rat = 0; rat < schedules.length; rat++) {
+                            if(rat <= 14){
+                                var stopHere = "";
+                            
+                            const schedule = schedules[rat];
+                            var homePossibleTeam = schedule.box_score_textLink.split(".")[0].slice(-3);
+                            var opponentName = schedule.opp_nameLink.split('/')[2];
+                            school_name = school_name.replace(/\s+/g, '').replace(/\(\d{1,2}\)/, '').replace("_","");
+                            var home_name = null;
+                            var away_name = null;
+                            if(homePossibleTeam.indexOf("-")<0)
+                            {
+                               home_name = school_name.toLowerCase().indexOf(homePossibleTeam.toLowerCase()) >=0 ? school_name : opponentName.toLowerCase().indexOf(homePossibleTeam.toLowerCase()) >=0 ? opponentName : null;
+                               if(home_name){
+                                    away_name = home_name == school_name ? opponentName : school_name;
+                               }
+                            }
+                            else{
+                                var option1 = homePossibleTeam.replace(/\s+/g, '').replace(/\(\d{1,2}\)/, '').replace("_","").replace(/-/g,"");
+                                home_name = school_name.toLowerCase().indexOf(option1.toLowerCase()) >=0 ? school_name : opponentName.toLowerCase().indexOf(option1.toLowerCase()) >=0 ? opponentName : null;
+                                if(home_name){
+                                    away_name = home_name == school_name ? opponentName : school_name;
+                               }
+                            }
+                            if(!home_name)
+                            {
+                                var options = homePossibleTeam.split("-");
+                                for (let index = 0; index < options.length; index++) {
+                                    const option = options[index];
+                                    home_name = school_name.toLowerCase().indexOf(option.toLowerCase()) >=0 ? school_name : opponentName.toLowerCase().indexOf(option1.toLowerCase()) >=0 ? opponentName : null;
+                                    if(home_name){
+                                        away_name = home_name == school_name ? opponentName : school_name;
+                                        break;
+                                    }
+                                }
+                                
+                                if(!home_name){
+                                    var lastOption = "";
+                                    for (let index = 0; index < options.length; index++) {
+                                        const option = options[index];
+                                        lastOption += option.charAt(0);
+                                    }
+                                    home_name = school_name.toLowerCase().indexOf(lastOption.toLowerCase()) >=0 ? school_name : opponentName.toLowerCase().indexOf(lastOption.toLowerCase()) >=0 ? opponentName : null;
+                                    if(home_name){
+                                        away_name = home_name == school_name ? opponentName : school_name;
+                                    }
+                                    else{
+                                        var stopHere = "";
+                                    }
+                               }
+                            }
+                            if(away_name == 'FloridaInternational' && home_name == "Liberty")
+                            {
+                                var stopHere = "";
+                            }
+                            var schedule_name = schedule.date_game.replace(" ","_").replace(" ","_").replace(",","");
+                            var gameRecords = [];
+                            var gameResults = [];
+                            var averageRecords = [];
+                            
+
+                            try{
+                                //gameRecords = await load("gameRecords","AnalysisData/" + isYear);
+                                
+                                try{
+                                    if(rat == 0){
+                                    gameResults = await load("formatedRecords","AnalysisData/" + (isYear-1));
+                                    var selectedGameResults = gameResults.filter(function(item){return item.team == home_name});
+                                    var selectedGameResult = selectedGameResults[selectedGameResults.length-1];
+                                    }
+                                    else{
+                                        gameResults = await load("formatedRecords","AnalysisData/" + (isYear));
+                                        var selectedGameResults = gameResults.filter(function(item){return item.team == home_name});
+                                        var selectedGameResult = selectedGameResults[selectedGameResults.length-1];
+                                        selectedGameResult = typeof selectedGameResult == "undefined" || selectedGameResult == null ? selectedGameResults[selectedGameResults.length-1] : selectedGameResult;
+                                    }
+                                }
+                                catch{
+                                    var selectedGameResult = null;
+                                    var stopHere = "";
+                                }
+                                
+                                try{
+                                    if(rat == 0){
+                                    var arr = [];
+                                    averageRecords = await load("averageRecords","AnalysisData/" + (isYear-1));
+                                    var selectedAverage = averageRecords.filter(function(item){return item.team == home_name});
+                                    var selectedAvg = selectedAverage[selectedAverage.length-1];
+
+                                    if(selectedAvg.defAllowedPoints != 0)
+                                    {
+                                        arr.push(selectedAvg);
+                                    }
+                                    selectedAverage = arr;
+                                    }
+                                    else{
+                                        var arr = [];
+                                        averageRecords = await load("averageRecords","AnalysisData/" + (isYear));
+                                        var selectedAverage = averageRecords.filter(function(item){return item.team == home_name});
+                                        var selectedAvg = selectedAverage[selectedAverage.length-1];
+                                        selectedAvg = typeof selectedAvg == "undefined" || selectedAvg == null ? selectedAverage[selectedAverage.length-1] : selectedAvg;
+                                        if((rat-1) <=0 )
+                                        {
+                                            if(selectedGameResult.defAllowedPoints != 0)
+                                            {
+                                                selectedAvg = selectedGameResult;
+                                            }
+                                                else{
+                                                    selectedAvg = null;
+                                                }
+                                        }
+                                        if(selectedAvg != null){
+                                            arr.push(selectedAvg);
+                                        }
+                                        selectedAverage = arr;
+                                    }
+                                }
+                                catch{
+                                    var selectedAverage = [];
+                                }
+                                var stopHere = "";
+                                //todo
+                                
+                                
+                                try{
+                                    if(rat ==0){
+                                    gameResults = await load("formatedRecords","AnalysisData/" + (isYear-1));
+                                    var opponentGameResults = gameResults.filter(function(item){return item.team == away_name});
+                                    var opponentGameResult = opponentGameResults[opponentGameResults.length-1];
+                                    }
+                                    else{
+                                        gameResults = await load("formatedRecords","AnalysisData/" + (isYear));
+                                        var opponentGameResults = gameResults.filter(function(item){return item.team == away_name});
+                                        var opponentGameResult = opponentGameResults[opponentGameResults.length-1];
+                                        opponentGameResult = typeof opponentGameResult == "undefined" || opponentGameResult == null  ? opponentGameResults[opponentGameResults.length-1] : opponentGameResult;
+                                        
+                                    }
+                                }
+                                catch{
+                                    var opponentGameResult = null;
+                                    var stopHere = "";
+                                }
+                                 
+                                try{
+                                    if(rat==0){
+                                    var arr = [];
+                                    averageRecords = await load("averageRecords","AnalysisData/" + (isYear-1));
+                                    var opponentAverage = averageRecords.filter(function(item){return item.team == away_name});
+                                    var opponentAvg = opponentAverage[opponentAverage.length-1];
+                                    if(away_name == "NorfolkState")
+                                    {
+                                        var stopHere = "";
+                                    }
+                                    if(opponentAvg.defAllowedPoints != 0)
+                                    {
+                                        arr.push(opponentAvg);
+                                    }
+                                    opponentAverage = arr;
+                                    }
+                                    else{
+                                        var arr = [];
+                                        averageRecords = await load("averageRecords","AnalysisData/" + (isYear));
+                                        var opponentAverage = averageRecords.filter(function(item){return item.team == away_name});
+                                        if(away_name == "NorfolkState")
+                                        {
+                                            var stopHere = "";
+                                        }
+                                        var opponentAvg = opponentAverage[opponentAverage.length-1];
+                                        opponentAvg = typeof opponentAvg == "undefined" || opponentAvg == null ? opponentAverage[opponentAverage.length-1] : opponentAvg;
+                                        if((rat-1) <=0 )
+                                            {
+                                                if(opponentGameResult.defAllowedPoints != 0)
+                                                {
+                                                    opponentAvg = opponentGameResult;
+                                                }
+                                                else{
+                                                    opponentAvg = null;
+                                                }
+                                            }
+                                            if(opponentAvg != null){
+                                                arr.push(opponentAvg);
+                                            }
+                                        opponentAverage = arr;
+                                    }
+                                }
+                                catch{
+                                    var opponentAverage = [];
+                                }
+
+                               var homeTeam = home_name;
+                               var awayTeam = away_name;
+                               var key = awayTeam.replace(/\s+/g, '').replace(/\(\d{1,2}\)/, '')+ "@" + homeTeam.replace(/\s+/g, '').replace(/\(\d{1,2}\)/, '') + "@" + schedule_name;
+                               var record = {key:key, date: schedule_name,homeTeam:homeTeam, awayTeam:awayTeam};
+                               var gameRecord =[];
+                               gameRecord.push(record);
+
+                               if(selectedAverage[0].defAllowedPoints == 0 || opponentAverage[0].defAllowedPoints == 0)
+                               {
+                                    var stopHere = "";
+                               }
+
+                            if(gameRecord.length > 0 && selectedAverage.length > 0 && selectedGameResult && opponentAverage.length > 0 && opponentGameResult)
+                            {
+                                var MLRecord = {};
+                                MLRecord.key = gameRecord[0].key;
+                                MLRecord.date = gameRecord[0].date;
+                                if(!toBeEvaluated){
+                                    MLRecord.isHomeWinner = gameRecord[0].isHomeWinner;
+                                    //MLRecord.scoreDiff = gameRecord[0].scoreDiff;
+                                }
+                                else{
+                                    MLRecord.isHomeWinner = 0;
+                                    //MLRecord.scoreDiff = 0;
+                                }
+                                MLRecord.homeTeam = gameRecord[0].homeTeam;
+                                MLRecord.awayTeam = gameRecord[0].awayTeam;
+                                //var homeRecords = gameRecord[0].homeTeam == selectedGameResult.team ? selectedGameResult : opponentGameResult;
+                                //MLRecord = appendProperties(MLRecord, homeRecords, "home");
+                                //var awayRecords = gameRecord[0].awayTeam == opponentGameResult.team ? opponentGameResult : selectedGameResult;
+                                //MLRecord = appendProperties(MLRecord, awayRecords, "away");
+                                var homeAverageRecords = gameRecord[0].homeTeam == selectedAverage[0].team ? selectedAverage[0] : opponentAverage[0];
+                                MLRecord = appendProperties(MLRecord, homeAverageRecords, "homeAvg");
+                                var awayAverageRecords = gameRecord[0].awayTeam == opponentAverage[0].team ? opponentAverage[0] : selectedAverage[0];
+                                MLRecord = appendProperties(MLRecord, awayAverageRecords, "awayAvg");
+                                var stopHere = ""
+                                var isThere = MLData.filter(function(item){return item.key == MLRecord.key });
+                                if(isThere.length == 0){
+                                    MLData.push(MLRecord);
+                                    if(!toBeEvaluated){
+                                        await save(yearToProcess+"MLData",MLData, function(){}, "replace" ,"AnalysisData");
+                                    }
+                                    else{
+                                        await save(yearToProcess+"MLDataToEvaluate",MLData, function(){}, "replace" ,"AnalysisData");
+                                    }
+                                }
+                            }
+                            else{
+                                var stopHere = "";
+                            }
+                            }
+                            catch(Ex){
+                                
+                            }
+                        }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    function extractTextBetween(inputString) {
+        const regex = /\d{4}-\d{2}-\d{2}-(.*)\.html/;
+        const match = inputString.match(regex);
+    
+        if (match && match[1]) {
+            return match[1];
+        } else {
+            return null; // Return null if no match is found
+        }
+    }
+
+    function appendProperties(finalObject, originalObject, prefix) {
+        for (let key in originalObject) {
+            if (originalObject.hasOwnProperty(key)) {
+                // Check if the key starts with "def" or "offense"
+                if (key.startsWith("def") || key.startsWith("offense")) {
+                    // Create a new key with the prefix
+                    let newKey = prefix + key.charAt(0).toUpperCase() + key.slice(1);
+                    // Add the new key to finalObject with the original value
+                    finalObject[newKey] = originalObject[key];
+                }
+            }
+        }
+        return finalObject;
+    }
+
+    async function formatGamesPerTeam(yearToProcess) {
         try {
             var isProcessed = await load("formatedRecords", "AnalysisData/" + yearToProcess);
         }
         catch {
             var isProcessed = []
         }
-        if (isProcessed.length == 0) 
-        {
+        if (isProcessed.length == 0) {
             var data = await load("gameRecords", "AnalysisData/" + yearToProcess);
             try {
                 var formatedRecords = await load("formatedRecords", "AnalysisData/" + yearToProcess);
@@ -111,12 +576,12 @@ const { Console } = require('console');
                     teamRecord.defOff_rtg = transformmedRecords.defenseOff_rtg == null || isNaN(transformmedRecords.defenseOff_rtg) ? 0 : transformmedRecords.defenseOff_rtg;
                     teamRecord.defPace = transformmedRecords.defensePace == null || isNaN(transformmedRecords.defensePace) ? 0 : transformmedRecords.defensePace;
                     teamRecord.defTov_pct = transformmedRecords.defenseTov_pct == null || isNaN(transformmedRecords.defenseTov_pct) ? 0 : transformmedRecords.defenseTov_pct;
-                   
+
                     teamRecord.defAllowedPointsQ1 = transformmedRecords.defenseQ1 == null || isNaN(transformmedRecords.defenseQ1) ? 0 : transformmedRecords.defenseQ1;
                     teamRecord.defAllowedPointsQ2 = transformmedRecords.defenseQ2 == null || isNaN(transformmedRecords.defenseQ2) ? 0 : transformmedRecords.defenseQ2;
                     teamRecord.defAllowedPointsQ3 = transformmedRecords.defenseQ3 == null || isNaN(transformmedRecords.defenseQ3) ? 0 : transformmedRecords.defenseQ3;
                     teamRecord.defAllowedPointsQ4 = transformmedRecords.defenseQ4 == null || isNaN(transformmedRecords.defenseQ4) ? 0 : transformmedRecords.defenseQ4;
-                    
+
                     teamRecord.offensePoints = transformmedRecords.offenseFinalScore == null || isNaN(transformmedRecords.offenseFinalScore) ? 0 : transformmedRecords.offenseFinalScore;
                     teamRecord.offenseAllowedEfg_pct = transformmedRecords.offenseEfg_pct == null || isNaN(transformmedRecords.offenseEfg_pct) ? 0 : transformmedRecords.offenseEfg_pct;
                     teamRecord.offenseCreatedFt_rate = transformmedRecords.offenseFt_rate == null || isNaN(transformmedRecords.offenseFt_rate) ? 0 : transformmedRecords.offenseFt_rate;
@@ -127,7 +592,7 @@ const { Console } = require('console');
                     teamRecord.offensePointsQ2 = transformmedRecords.offenseQ2 == null || isNaN(transformmedRecords.offenseQ2) ? 0 : transformmedRecords.offenseQ2;
                     teamRecord.offensePointsQ3 = transformmedRecords.offenseQ3 == null || isNaN(transformmedRecords.offenseQ3) ? 0 : transformmedRecords.offenseQ3;
                     teamRecord.offensePointsQ4 = transformmedRecords.offenseQ4 == null || isNaN(transformmedRecords.offenseQ4) ? 0 : transformmedRecords.offenseQ4;
-                    
+
                     formatedRecords.push(teamRecord);
                     await save("formatedRecords", formatedRecords, function () { }, "replace", "AnalysisData/" + yearToProcess);
                     var stopHere = "";
@@ -137,39 +602,38 @@ const { Console } = require('console');
         }
     }
 
-    async function generateAverages(yearToProcess)
-    {
+    async function generateAverages(yearToProcess) {
         console.log("Averaging data for: " + yearToProcess);
-        var data = await load("formatedRecords","AnalysisData/"+yearToProcess);
-        try{
-            var averageRecords = await load("averageRecords","AnalysisData/"+yearToProcess);
+        var data = await load("formatedRecords", "AnalysisData/" + yearToProcess);
+        try {
+            var averageRecords = await load("averageRecords", "AnalysisData/" + yearToProcess);
         }
-        catch{
+        catch {
             var averageRecords = [];
         }
-        var teams = data.map(function(item){
+        var teams = data.map(function (item) {
             return item.team;
         });
         var uniqueValues = Array.from(new Set(teams));
         for (let index = 0; index < uniqueValues.length; index++) {
             const team = uniqueValues[index];
-            var games = data.filter(function(item){
+            var games = data.filter(function (item) {
                 return item.team == team;
             });
             var sortedGames = sortByDate(games);
             var averageGames = calculateAverages(sortedGames);
             averageRecords = averageRecords.concat(averageGames);
-            await save("averageRecords",averageRecords, function(){}, "replace" ,"AnalysisData/"+yearToProcess);
+            await save("averageRecords", averageRecords, function () { }, "replace", "AnalysisData/" + yearToProcess);
         }
     }
 
     function calculateAverages(data) {
         let result = [];
-    
+
         for (let i = 0; i < data.length; i++) {
             let current = data[i];
             let newObject = {};
-    
+
             if (i === 0) {
                 // For the first object, set all numeric values to 0
                 for (let key in current) {
@@ -193,10 +657,10 @@ const { Console } = require('console');
                     }
                 }
             }
-    
+
             result.push(newObject);
         }
-    
+
         return result;
     }
 
@@ -205,7 +669,7 @@ const { Console } = require('console');
             // Convert the date strings to Date objects
             let dateA = new Date(a.date.replace(/_/g, ' '));
             let dateB = new Date(b.date.replace(/_/g, ' '));
-    
+
             // Compare the two dates
             return dateA - dateB;
         });
@@ -213,38 +677,38 @@ const { Console } = require('console');
 
     function transformPropertyNames(obj, isOffense) {
         let transformedObj = {};
-    
+
         for (let key in obj) {
             if (obj.hasOwnProperty(key)) {
                 let newKey = key;
-    
+
                 // Replace "home" with "offense"
-                if(isOffense == "home"){
+                if (isOffense == "home") {
                     if (key.includes("home")) {
                         newKey = key.replace("home", "offense");
                     }
-        
+
                     // Replace "away" with "defense"
                     if (key.includes("away")) {
                         newKey = key.replace("away", "defense");
                     }
                 }
-                else{
+                else {
                     if (key.includes("home")) {
                         newKey = key.replace("home", "defense");
                     }
-        
+
                     // Replace "away" with "defense"
                     if (key.includes("away")) {
                         newKey = key.replace("away", "offense");
                     }
                 }
-    
+
                 // Add the transformed key and its value to the new object
                 transformedObj[newKey] = obj[key];
             }
         }
-    
+
         return transformedObj;
     }
 
@@ -256,7 +720,7 @@ const { Console } = require('console');
             const year = years[index];
 
             var isYear = parseInt(year.season.split("-")[0]);
-            if (!isNaN(isYear) && year.season == yearToProcess) {
+            if (!isNaN(isYear) && isYear == yearToProcess) {
                 var teamsE = await load("schedules_confs_standings_E", year.season);
                 var teamsW = await load("schedules_confs_standings_W", year.season);
                 var teams = teamsE.concat(teamsW);
@@ -267,7 +731,7 @@ const { Console } = require('console');
 
                     for (let dfs = 0; dfs < schedules.length; dfs++) {
                         const game = schedules[dfs];
-                        if (game.box_score_textLink) {
+                        if (game.box_score_textLink && game.game_result) {
                             //console.log(game.box_score_textLink);
                             var team_stats = await load("games_four_factors_" + game.box_score_textLink.split("/")[2].replace(".html", ""), year.season);
                             var results = await load("games_line_score_" + game.box_score_textLink.split("/")[2].replace(".html", ""), year.season);
@@ -327,7 +791,7 @@ const { Console } = require('console');
 
                             try {
                                 if (team_stats && newResults) {
-                                    await addStatRecord(newResults, newTeam_stats, formatDateString(game.date_game), year.season);
+                                    await addStatRecord(newResults, newTeam_stats, formatDateString(game.date_game), isYear);
                                 }
                             }
                             catch (Ex) {
@@ -343,12 +807,12 @@ const { Console } = require('console');
     function formatDateString(dateString) {
         // Parse the date string
         const date = new Date(dateString);
-        
+
         // Extract year, month, and day
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
         const day = String(date.getDate()).padStart(2, '0');
-        
+
         // Format as "YYYY_MM_DD"
         return `${year}_${month}_${day}`;
     }
