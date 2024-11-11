@@ -414,7 +414,10 @@ const { Console } = require('console');
             var yearResults = await load("gameRecords", "AnalysisData/" + yearToProcess);
             allMLRecords.forEach(record => {
                 var keyParts = record.key.split("@");
-
+                if(keyParts[2] == '2024_11_07')
+                {
+                    var stopHere = "";
+                }
                 var sel = yearResults.filter(function (item) { return (item.key.indexOf(keyParts[0]) >= 0 && item.key.indexOf(keyParts[1]) >= 0 && item.key.indexOf(keyParts[2]) >= 0) });
                 if (sel.length > 0) {
                     var awayTeamSel = sel[0].key.split("@")[0];
@@ -1620,8 +1623,16 @@ const { Console } = require('console');
 
                     for (let dfs = 0; dfs < schedules.length; dfs++) {
                         const game = schedules[dfs];
-                        if (game.box_score_textLink && game.game_result) {
+                        if (game.box_score_textLink &&  isDateInPast(formatDateString(game.date_game).replace("_","").replace("_",""))) {
                             //console.log(game.box_score_textLink);
+                            if(team.team_nameLink.indexOf("MIL") >= 0)
+                            {
+                                var stopHere = "";
+                            }
+                            if(game.date_game.indexOf("Nov 7") >= 0)
+                            {
+                                var stopHere = "";
+                            }
                             var team_stats = await load("games_four_factors_" + game.box_score_textLink.split("/")[2].replace(".html", ""), year.season);
                             var results = await load("games_line_score_" + game.box_score_textLink.split("/")[2].replace(".html", ""), year.season);
 
