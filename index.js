@@ -25,13 +25,13 @@ const { Console } = require('console');
         //await getSchedulesPerYear();
         //await getGamesPerYear();
 
-        // var years = [2024]//, //2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
-        // for (let index = 0; index < years.length; index++) {
-        //     const yearTo = years[index];
-        //     await prepareData(yearTo);
-        //     await formatGamesPerTeam(yearTo);
-        //     await generateAverages(yearTo);
-        // }
+        var years = [2024]//, //2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
+        for (let index = 0; index < years.length; index++) {
+            const yearTo = years[index];
+            await prepareData(yearTo);
+            await formatGamesPerTeam(yearTo);
+            await generateAverages(yearTo);
+        }
 
 
         //var years = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
@@ -54,6 +54,7 @@ const { Console } = require('console');
         //     var toBeEvaluated = true;
         //     await generateMLRecords(yearTo, toBeEvaluated);
         // }
+
 
         await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
 
@@ -436,7 +437,7 @@ const { Console } = require('console');
         }
         catch { }
 
-
+try{
         var analysisArray = await load("MLData", "AnalysisData");
         var targetData = await load(yearToProcess + "MLDataToEvaluate", "AnalysisData");
         allMLRecords.forEach(game => {
@@ -990,7 +991,10 @@ const { Console } = require('console');
             }
             record.probAvg = ((record.projectedResults.isHomeWinner.probability/100) + record.predictions.isHomeWinner.RandomForest.probability + record.predictions.isHomeWinner.LogisticRegression.probability) / 3;
         });
+    }
+    catch{
 
+    }
         await save(fileToEnrich, allMLRecords, function () { }, "replace", "AnalysisData");
 
     }
@@ -1370,7 +1374,11 @@ const { Console } = require('console');
                                         MLRecord = appendProperties(MLRecord, awayAverageRecords, "awayAvg");
                                         var stopHere = ""
                                         var isThere = MLData.filter(function (item) { return item.key == MLRecord.key });
-                                        if (isThere.length == 0) {
+                                        var MLResults = await load(yearToProcess+"NewMLResults", "AnalysisData");
+                                        // var wasProcessed = MLResults.filter(function(item){return item.key == MLRecord.key});
+                                        // var wasProcessed = wasProcessed.length > 0 && wasProcessed[0].totalPoints != 0 ? true : false;
+                                         var stopHere = "";
+                                        if (isThere.length == 0 /* && !wasProcessed */) {
                                             MLData.push(MLRecord);
                                             if (!toBeEvaluated) {
                                                 await save(yearToProcess + "MLData", MLData, function () { }, "replace", "AnalysisData");
@@ -1385,7 +1393,7 @@ const { Console } = require('console');
                                     }
                                 }
                                 catch (Ex) {
-
+                                    console.log(Ex);
                                 }
                             }
                         }
