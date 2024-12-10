@@ -48,15 +48,15 @@ const { Console } = require('console');
         //     await save("MLData", MLData, function () { }, "replace", "AnalysisData")
         // }
 
-        // var years = [2024];
-        // for (let index = 0; index < years.length; index++) {
-        //     const yearTo = years[index];
-        //     var toBeEvaluated = true;
-        //     await generateMLRecords(yearTo, toBeEvaluated);
-        // }
+        var years = [2024];
+        for (let index = 0; index < years.length; index++) {
+            const yearTo = years[index];
+            var toBeEvaluated = true;
+            await generateMLRecords(yearTo, toBeEvaluated);
+        }
 
 
-        await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
+        //await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
 
     }
     catch (Ex) {
@@ -1162,7 +1162,7 @@ try{
                     }
                     else {
                         for (let rat = 0; rat < schedules.length; rat++) {
-                            if (rat <= 25) {
+                            if (rat >= 25 && rat <= 35) {
                                 var stopHere = "";
                                 
                                 const schedule = schedules[rat];
