@@ -48,15 +48,15 @@ const { Console } = require('console');
         //     await save("MLData", MLData, function () { }, "replace", "AnalysisData")
         // }
 
-        var years = [2024];
-        for (let index = 0; index < years.length; index++) {
-            const yearTo = years[index];
-            var toBeEvaluated = true;
-            await generateMLRecords(yearTo, toBeEvaluated);
-        }
+        // var years = [2024];
+        // for (let index = 0; index < years.length; index++) {
+        //     const yearTo = years[index];
+        //     var toBeEvaluated = true;
+        //     await generateMLRecords(yearTo, toBeEvaluated);
+        // }
 
 
-        //await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
+        await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
 
     }
     catch (Ex) {
@@ -1028,7 +1028,10 @@ try{
                     const team = teams[df];
                     var school_name = team.team_nameLink.split("/")[2].replace(" ", "_");
                     var schedules = await load("schedules_games_" + team.team_nameLink.split('/')[2], year.season);
-
+                    if(school_name == "MIL")
+                    {
+                        var stopHere = "";
+                    }
                     if (schedules.length > 0 && isYear != 2024 && isYear == yearToProcess) {
                         for (let rat = (schedules.length - 1); rat >= 0; rat--) {
                             const schedule = schedules[rat];
@@ -1161,12 +1164,21 @@ try{
                         }
                     }
                     else {
+                        // Parse the date_game string into a Date object
+                        
+
+                        // Get today's date and set the time to 00:00:00 for accurate comparison
+                        const today = new Date();
+                        today.setHours(0, 0, 0, 0);
+
                         for (let rat = 0; rat < schedules.length; rat++) {
-                            if (rat >= 25 && rat <= 35) {
+                            //if (rat >= 25 && rat <= 35) {
                                 var stopHere = "";
                                 
                                 const schedule = schedules[rat];
-                                if(schedule.date_game != "Date"){
+                                const gameDate = new Date(schedule.date_game);
+                                
+                                if(schedule.date_game != "Date" && (gameDate.toDateString() == today.toDateString() || gameDate < today )){
                                 var homePossibleTeam = schedule.box_score_textLink.split(".")[0].slice(-3);
                                 var opponentName = schedule.opp_nameLink.split('/')[2];
                                 school_name = school_name.replace(/\s+/g, '').replace(/\(\d{1,2}\)/, '').replace("_", "");
@@ -1375,7 +1387,7 @@ try{
                                         MLRecord = appendProperties(MLRecord, awayAverageRecords, "awayAvg");
                                         var stopHere = ""
                                         var isThere = MLData.filter(function (item) { return item.key == MLRecord.key });
-                                        var MLResults = await load(yearToProcess+"NewMLResults", "AnalysisData");
+                                        //var MLResults = await load(yearToProcess+"NewMLResults", "AnalysisData");
                                         // var wasProcessed = MLResults.filter(function(item){return item.key == MLRecord.key});
                                         // var wasProcessed = wasProcessed.length > 0 && wasProcessed[0].totalPoints != 0 ? true : false;
                                          var stopHere = "";
@@ -1397,7 +1409,7 @@ try{
                                     console.log(Ex);
                                 }
                             }
-                        }
+                        //}
                         }
 
                     }
@@ -1804,7 +1816,7 @@ try{
 
 
             var isYear = parseInt(year.season.split("-")[0]);
-            if (!isNaN(isYear)) {
+            if (!isNaN(isYear) && isYear == 2024) {
                 var teamsE = await load("schedules_confs_standings_E", year.season);
                 var teamsW = await load("schedules_confs_standings_W", year.season);
                 var teams = teamsE.concat(teamsW);
