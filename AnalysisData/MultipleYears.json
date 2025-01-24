@@ -4,71 +4,119 @@
         "data": [
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 0,
-                            "probability": 0.54
+                            "probability": 0.52
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.5092265074519331
+                            "probability": 0.7348796344574382
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.72
+                        },
+                        "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.58
+                            "probability": 0.7614019937836531
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "CHI@GSW@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.74
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.6443701017131431
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAS@IND@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.62
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6014602612338054
+                            "probability": 0.5957573686477196
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
+                "key": "POR@ORL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.64
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.5240078684293674
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.57
+                            "prediction": 1,
+                            "probability": 0.62
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.5366147442178515
+                            "probability": 0.6252982186481911
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "TOR@ATL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.77
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7107648971024823
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.63
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.6090726499204344
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -77,71 +125,39 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.867710162132958
+                            "probability": 0.6943778109035883
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
+                "key": "SAC@DEN@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 0,
-                            "probability": 0.69
+                            "probability": 0.56
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.5404853346483267
+                            "probability": 0.7813640732144025
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
+                "key": "WAS@LAC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.8
+                            "probability": 0.78
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.9445235659178304
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.7
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6332330145412923
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.64
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6281664215638474
+                            "probability": 0.8282369672206152
                         }
                     }
                 }
@@ -153,55 +169,55 @@
         "data": [
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.63
+                            "prediction": 0,
+                            "probability": 0.58
                         },
                         "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.5358717693262148
+                            "prediction": 0,
+                            "probability": 0.5612009473231541
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
+                            "probability": 0.7
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.5068207614266278
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "CHI@GSW@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
                             "probability": 0.52
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.668283027460393
+                            "probability": 0.7902588853207206
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.56
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.869816563789011
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
+                "key": "SAS@IND@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -210,87 +226,103 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6220361843675659
+                            "probability": 0.5346549262418353
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "POR@ORL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.61
+                            "probability": 0.67
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6588427921705675
+                            "prediction": 1,
+                            "probability": 0.9310762880238199
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
+                "key": "TOR@ATL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.67
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6178647829328398
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.58
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5616011655887746
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.73
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7835921479964078
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAC@DEN@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.58
+                        },
+                        "LogisticRegression": {
                             "prediction": 0,
+                            "probability": 0.5111049796542748
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
                             "probability": 0.66
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.5188852752641
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.81
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.9598409883542182
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.66
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6810493564276701
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.56
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.5788682126146781
+                            "probability": 0.7506416049136718
                         }
                     }
                 }
@@ -303,71 +335,23 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.52
+                            "probability": 0.55
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7510707713298284
+                            "prediction": 1,
+                            "probability": 0.5640453191489672
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.54
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.5928473141491124
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.56
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.602317413914954
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.53
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6366948847453543
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -376,46 +360,30 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.864404619902598
+                            "probability": 0.7705792218933813
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.73
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.825571911501383
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
+                "key": "CHI@GSW@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.72
+                            "probability": 0.57
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.7551671198150616
+                            "probability": 0.7063619146508969
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
+                "key": "SAS@IND@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -424,23 +392,103 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6632554815720144
+                            "probability": 0.6890615543646734
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
+                "key": "POR@ORL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.56
+                            "probability": 0.59
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7363319632149575
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "TOR@ATL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.64
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5524104902608175
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.51
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.5748191370859981
+                            "probability": 0.798053755565397
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.63
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.8375311931291324
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAC@DEN@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.54
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5933344440902387
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.61
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.6218547878025469
                         }
                     }
                 }
@@ -452,7 +500,103 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.54
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5833910824844407
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "MIA@MIL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.58
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5651905868056891
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "CHI@GSW@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.59
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5546962705640356
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAS@IND@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.52
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.5136984828872169
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "POR@ORL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.5
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.544360225507574
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "TOR@ATL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.54
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5026542113293705
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -461,62 +605,14 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6107134825163716
+                            "probability": 0.6269445126205694
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.63
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.8058110802528478
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.54
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7907757637187061
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.53
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.8046788964794716
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "DAL@OKC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -525,71 +621,39 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.8111168175597742
+                            "probability": 0.6320461082905307
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
+                "key": "SAC@DEN@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 0,
-                            "probability": 0.71
+                            "probability": 0.52
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6301005619590834
+                            "prediction": 1,
+                            "probability": 0.8355277533592629
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
+                "key": "WAS@LAC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.6
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6394038928150787
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.53
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6533763521191477
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.62
+                            "probability": 0.73
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.8479645957878889
+                            "probability": 0.7693833835621858
                         }
                     }
                 }
@@ -601,71 +665,55 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.6
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.7516796843009323
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.58
+                            "probability": 0.54
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.8179833624205886
+                            "probability": 0.6836813109661608
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
+                "key": "CHI@GSW@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 0,
-                            "probability": 0.61
+                            "probability": 0.55
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.6515519359410988
+                            "probability": 0.6517870627764799
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.69
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7287411913469428
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.67
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.5929224270258089
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "SAS@IND@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -674,62 +722,46 @@
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.5852760941317345
+                            "probability": 0.7592275993366029
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.58
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7960956580938301
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
+                "key": "POR@ORL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.52
+                            "probability": 0.54
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.7534594671714789
+                            "probability": 0.7716565033632636
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
+                "key": "TOR@ATL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.67
+                            "probability": 0.54
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.6165949333910362
+                            "probability": 0.5107110981552083
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
+                "key": "WAS@UTA@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -738,7 +770,55 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.7226927363986346
+                            "probability": 0.7757286513960204
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.51
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.8587763870776381
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAC@DEN@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.6
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.5203895739373124
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.57
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5677807196673289
                         }
                     }
                 }
@@ -750,135 +830,7 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.52
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.7577433240765351
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.5
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6486616003883474
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.53
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6352809512720358
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.52
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6307522864712904
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.52
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6078401132612697
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.59
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7101075181450642
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.68
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.8544341915653875
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.58
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.5906008391080997
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -887,7 +839,151 @@
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.5669630602415119
+                            "probability": 0.636353122126113
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "MIA@MIL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.63
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6638840009047816
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "CHI@GSW@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.56
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6250097586290967
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAS@IND@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.55
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5473803482538745
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "POR@ORL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.76
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7681911542053167
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "TOR@ATL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.56
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.7053266381403129
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.52
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7263449634409633
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.54
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7670319003312479
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAC@DEN@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.51
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.5634178860294177
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.62
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.901426494601787
                         }
                     }
                 }
@@ -899,71 +995,39 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.52
+                            "probability": 0.56
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.8752464829311063
+                            "probability": 0.5524972330173733
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.63
+                            "probability": 0.72
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6322983977543445
+                            "probability": 0.659716810747678
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.54
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6929032039625266
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.52
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.5999332581348411
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "CHI@GSW@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -972,30 +1036,78 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.7009967281805458
+                            "probability": 0.605293395973833
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
+                "key": "SAS@IND@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.56
+                            "prediction": 1,
+                            "probability": 0.57
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.8785582432595143
+                            "probability": 0.5863746663831021
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
+                "key": "POR@ORL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.64
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5442290914884679
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "TOR@ATL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.55
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.7093587847211485
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.55
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7160317294123755
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -1004,39 +1116,39 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.7889131275088325
+                            "probability": 0.8607828845205897
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.55
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7089443099425837
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
+                "key": "SAC@DEN@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.62
+                            "probability": 0.53
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.504536967542103
+                            "prediction": 1,
+                            "probability": 0.7856345321063497
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.73
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.8269206154777677
                         }
                     }
                 }
@@ -1048,55 +1160,7 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.64
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.8647861345627466
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.55
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.523579061708401
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.56
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.5441346224144016
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -1105,87 +1169,151 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.7619831642848911
+                            "probability": 0.691036597859596
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.72
+                            "probability": 0.77
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.9284308683044983
+                            "probability": 0.6823094531693663
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
+                "key": "CHI@GSW@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 0,
+                            "probability": 0.5
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6964485171733054
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAS@IND@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.57
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.700711793870431
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "POR@ORL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
                             "probability": 0.54
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.504645907678944
+                            "probability": 0.6905553759106773
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
+                "key": "TOR@ATL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.6
+                            "probability": 0.56
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6617748692062655
+                            "probability": 0.5523387482100475
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
+                "key": "WAS@UTA@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.67
+                            "probability": 0.61
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6487495919393199
+                            "probability": 0.7596355761694533
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
+                "key": "DAL@OKC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.71
+                            "probability": 0.66
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.5856047627987142
+                            "probability": 0.9426956262286834
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAC@DEN@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.63
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7685144319289227
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.58
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6232195215345019
                         }
                     }
                 }
@@ -1197,7 +1325,23 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.55
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.924556272519777
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -1206,110 +1350,30 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.9754724948447283
+                            "probability": 0.9214447703237619
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
+                "key": "CHI@GSW@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.59
+                            "probability": 0.7
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.9615146903195518
+                            "probability": 0.992864899408226
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.5
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.8958200156403285
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.64
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.9491921037441463
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.68
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.9252019941165845
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.56
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.9544124898430026
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.65
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.948326337549831
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
+                "key": "SAS@IND@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -1318,14 +1382,30 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.6657182025501855
+                            "probability": 0.8988063726127773
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
+                "key": "POR@ORL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.59
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.9135354681042519
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "TOR@ATL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -1334,7 +1414,71 @@
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.9668670885136101
+                            "probability": 0.9481299060142258
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.67
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.9824024655054949
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.68
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.973793762139329
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAC@DEN@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.71
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.9798495307715396
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.76
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.9849908883364287
                         }
                     }
                 }
@@ -1346,135 +1490,7 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.59
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.5998586547989507
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.52
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6317234257558325
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.51
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.5237652649219879
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.52
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.701445751352277
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.51
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.6479142921940356
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.51
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.5583504417706296
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.61
-                        },
-                        "LogisticRegression": {
-                            "prediction": 1,
-                            "probability": 0.7422697660750683
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
-                            "prediction": 1,
-                            "probability": 0.56
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.8536856858533368
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
@@ -1483,7 +1499,151 @@
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.6084046722502512
+                            "probability": 0.7037548472144598
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "MIA@MIL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.54
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6057830536916161
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "CHI@GSW@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.6
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6569430190190501
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAS@IND@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.54
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.6076452151121619
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "POR@ORL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.54
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.554398105353614
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "TOR@ATL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.5
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.7195152851816788
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@UTA@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.57
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.5869219945015397
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "DAL@OKC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.53
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.683024700585238
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAC@DEN@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 0,
+                            "probability": 0.5
+                        },
+                        "LogisticRegression": {
+                            "prediction": 0,
+                            "probability": 0.5165773490529684
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "WAS@LAC@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.66
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.7178921696592352
                         }
                     }
                 }
@@ -1495,144 +1655,160 @@
         "data":[
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CLE@HOU@2025_01_22",
+                "key": "BOS@LAL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 0,
-                            "probability": 0.52
+                            "probability": 0.62
                         },
                         "LogisticRegression": {
                             "prediction": 0,
-                            "probability": 0.6772523100460244
+                            "probability": 0.6434426938946729
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "BOS@LAC@2025_01_22",
+                "key": "MIA@MIL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.52
+                            "probability": 0.74
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.655412561027316
+                            "prediction": 1,
+                            "probability": 0.6817101224274871
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "PHO@BRK@2025_01_22",
+                "key": "CHI@GSW@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
-                            "prediction": 0,
+                            "prediction": 1,
+                            "probability": 0.61
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6220541828674111
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "SAS@IND@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
+                            "probability": 0.62
+                        },
+                        "LogisticRegression": {
+                            "prediction": 1,
+                            "probability": 0.6053508612164094
+                        }
+                    }
+                }
+            },
+            {
+                "file": "/content/NewGames/2024MLDataToEvaluate.json",
+                "key": "POR@ORL@2025_01_23",
+                "predictions": {
+                    "isHomeWinner": {
+                        "RandomForest": {
+                            "prediction": 1,
                             "probability": 0.54
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7997620846355878
+                            "prediction": 1,
+                            "probability": 0.7175673613033278
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "DET@ATL@2025_01_22",
+                "key": "TOR@ATL@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.56
+                            "prediction": 1,
+                            "probability": 0.69
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6081543627041138
+                            "prediction": 1,
+                            "probability": 0.5584504701844865
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "CHO@MEM@2025_01_22",
+                "key": "WAS@UTA@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.68
+                            "probability": 0.63
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.5903173661008583
+                            "probability": 0.7540737108915235
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIL@NOP@2025_01_22",
+                "key": "DAL@OKC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
-                            "prediction": 0,
-                            "probability": 0.66
+                            "prediction": 1,
+                            "probability": 0.76
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.8572146927549045
+                            "prediction": 1,
+                            "probability": 0.8164504987666799
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "UTA@OKC@2025_01_22",
+                "key": "SAC@DEN@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.79
+                            "probability": 0.62
                         },
                         "LogisticRegression": {
                             "prediction": 1,
-                            "probability": 0.7877562834254388
+                            "probability": 0.5982430723756743
                         }
                     }
                 }
             },
             {
                 "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "GSW@SAC@2025_01_22",
+                "key": "WAS@LAC@2025_01_23",
                 "predictions": {
                     "isHomeWinner": {
                         "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.55
+                            "probability": 0.67
                         },
                         "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.7439538718576917
-                        }
-                    }
-                }
-            },
-            {
-                "file": "/content/NewGames/2024MLDataToEvaluate.json",
-                "key": "MIN@DAL@2025_01_22",
-                "predictions": {
-                    "isHomeWinner": {
-                        "RandomForest": {
                             "prediction": 1,
-                            "probability": 0.55
-                        },
-                        "LogisticRegression": {
-                            "prediction": 0,
-                            "probability": 0.6237966534151422
+                            "probability": 0.8626836608529451
                         }
                     }
                 }

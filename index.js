@@ -34,12 +34,12 @@ const { Console } = require('console');
         // }
 
 
-        var years = [2024];//[2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
-        for (let index = 0; index < years.length; index++) {
-            const yearTo = years[index];
-            var toBeEvaluated = false;
-            await generateMLRecords(yearTo, toBeEvaluated);
-        }
+        // var years = [2024];//[2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        // for (let index = 0; index < years.length; index++) {
+        //     const yearTo = years[index];
+        //     var toBeEvaluated = false;
+        //     await generateMLRecords(yearTo, toBeEvaluated);
+        // }
         // var MLData = [];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
@@ -56,7 +56,7 @@ const { Console } = require('console');
         // }
 
 
-        //await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
+        await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
 
     }
     catch (Ex) {
@@ -1178,7 +1178,7 @@ try{
                                 const schedule = schedules[rat];
                                 const gameDate = new Date(schedule.date_game);
                                 
-                                if(schedule.date_game != "Date" && (gameDate.toDateString() == today.toDateString() /* || gameDate < today */ )){
+                                if(schedule.date_game != "Date" && (gameDate.toDateString() == today.toDateString()  /* || gameDate < today   */)){
                                 var homePossibleTeam = schedule.box_score_textLink.split(".")[0].slice(-3);
                                 var opponentName = schedule.opp_nameLink.split('/')[2];
                                 school_name = school_name.replace(/\s+/g, '').replace(/\(\d{1,2}\)/, '').replace("_", "");
