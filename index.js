@@ -23,7 +23,7 @@ const { Console } = require('console');
         //await getTableData("/leagues/" ,"stats", "BaseData");
         //await getSeasonsPerYear();
         //await getSchedulesPerYear();
-        //await getGamesPerYear();
+        await getGamesPerYear();
 
         // var years = [2024]//, //2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
         // for (let index = 0; index < years.length; index++) {
@@ -34,7 +34,7 @@ const { Console } = require('console');
         // }
 
 
-        // var years = [2024];//[2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        // var years = [2024];//, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     var toBeEvaluated = false;
@@ -1130,13 +1130,11 @@ try{
 
                                     if (!toBeEvaluated) {
                                         MLRecord.isHomeWinner = gameRecord[0].isHomeWinner;
-                                        MLRecord.scoreDiff = gameRecord[0].scoreDiff;
-                                        MLRecord.totalPoints = gameRecord[0].totalPoints;
+                                        MLRecord.isUnder = gameRecord[0].totalPoints < 220 ? 1: gameRecord[0].totalPoints > 229 ? 0 : 2;
                                     }
                                     else {
                                         MLRecord.isHomeWinner = 0;
-                                        MLRecord.scoreDiff = 0;
-                                        MLRecord.totalPoints = 0;
+                                        MLRecord.isUnder =  0;
                                         // MLRecord.awayAvgDefAllowedPoints = 0;
                                         // MLRecord.awayAvgOffensePoints = 0;
                                         // MLRecord.homeAvgDefAllowedPoints = 0;
@@ -1369,10 +1367,12 @@ try{
                                         MLRecord.date = gameRecord[0].date;
                                         if (!toBeEvaluated) {
                                             MLRecord.isHomeWinner = gameRecord[0].isHomeWinner;
+                                            ;
                                             //MLRecord.scoreDiff = gameRecord[0].scoreDiff;
                                         }
                                         else {
                                             MLRecord.isHomeWinner = 0;
+                                            MLRecord.isUnder =  0;
                                             //MLRecord.scoreDiff = 0;
                                         }
                                         MLRecord.homeTeam = gameRecord[0].homeTeam;
