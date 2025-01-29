@@ -55,6 +55,19 @@ const { Console } = require('console');
             await generateMLRecords(yearTo, toBeEvaluated);
         }
 
+        // var MLData2015 = await load("2015MLData", "AnalysisData");
+        // var MLData2016 = await load("2016MLData", "AnalysisData");
+        // var MLData2017 = await load("2017MLData", "AnalysisData");
+        // var MLData2018 = await load("2018MLData", "AnalysisData");
+        // var MLData2019 = await load("2019MLData", "AnalysisData");
+        // var MLData2020 = await load("2020MLData", "AnalysisData");
+        // var MLData2021 = await load("2021MLData", "AnalysisData");
+        // var MLData2022 = await load("2022MLData", "AnalysisData");
+        // var MLData2023 = await load("2023MLData", "AnalysisData");
+        // var MLData2024 = await load("2024MLData", "AnalysisData");
+        // const array = [MLData2015, MLData2016, MLData2017, MLData2018, MLData2019, MLData2020, MLData2021, MLData2022, MLData2023, MLData2024];
+        // const combinations = await getAllCombinations(array);
+
 
         //await enrichMLResults("2024NewMLResults", 2024, "Week11", 2023);
 
@@ -66,6 +79,38 @@ const { Console } = require('console');
     } finally {
         await driver.quit();
         //await example();
+    }
+
+    async function getAllCombinations(array) {
+        const results = [];
+    
+        function combine(tempArray, remainingArray, startIndex) {
+            if (tempArray.length === 5) {
+                results.push([...tempArray]);
+                return;
+            }
+            
+            for (let i = startIndex; i < remainingArray.length; i++) {
+                tempArray.push(remainingArray[i]);
+                combine(tempArray, remainingArray, i + 1);
+                tempArray.pop();
+            }
+        }
+    
+        combine([], array, 0);
+    
+        for (let index = 0; index < 10; index++) {
+            const combination = results[getRandomInt(0, (results.length-1))];
+            await save(`combination${index}`, combination, function(){}, "replace", "AnalysisData/combinations");
+        }
+    
+        return results;
+    }
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);  // Ensure the lower bound is rounded up
+        max = Math.floor(max); // Ensure the upper bound is rounded down
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     async function LogIn() {
@@ -81,7 +126,7 @@ const { Console } = require('console');
         let loginElement = await driver.wait(until.elementLocated(By.id('username')), 10000);
         await driver.wait(until.elementIsVisible(loginElement), 10000);
 
-        await driver.findElement(By.id('username')).sendKeys('jose.carbajal.salinas@gmail.com');
+        await driver.findElement(By.id('username')).sendKeys('ana.morenovera@gmail.com');
         await driver.findElement(By.id('password')).sendKeys('Lom@s246', Key.RETURN);
 
 
