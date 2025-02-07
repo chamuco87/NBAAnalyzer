@@ -93,7 +93,7 @@ scaler = StandardScaler()
 df[numerical_features] = scaler.fit_transform(df[numerical_features])
 
 # Define target variables
-targets = ['isHomeWinner']
+targets = ['isHomeWinner', 'isUnder']
 
 # Dictionary to store models and predictions
 models_rf = {}

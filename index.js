@@ -1892,7 +1892,7 @@ try{
             const year = years[index];
 
             var isYear = parseInt(year.season.split("-")[0]);
-            if (!isNaN(isYear)) {
+            if (!isNaN(isYear) && isYear == 2024) {
                 var teamsE = await load("schedules_confs_standings_E", year.season);
                 var teamsW = await load("schedules_confs_standings_W", year.season);
                 var teams = teamsE.concat(teamsW);
