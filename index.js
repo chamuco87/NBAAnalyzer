@@ -25,7 +25,7 @@ const { Console } = require('console');
         //await getSchedulesPerYear();
         //await getGamesPerYear();
 
-        // var years = [2024]//, //2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
+        // var years = [2024];//, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     await prepareData(yearTo);
@@ -38,21 +38,35 @@ const { Console } = require('console');
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     var toBeEvaluated = false;
-        //     await generateMLRecords(yearTo, toBeEvaluated);
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");  
         // }
         var MLData = [];
+        var MLData5 = [];
+        var MLData10 = [];
         for (let index = 0; index < years.length; index++) {
             const yearTo = years[index];
-            var data = await load(yearTo + "MLData", "AnalysisData")
+            var data = await load(yearTo+"MLData", "AnalysisData");
             MLData = MLData.concat(data);
-            await save("MLData", MLData, function () { }, "replace", "AnalysisData")
+            await save("MLData",MLData, function(){}, "replace", "AnalysisData");
+
+            var data5 = await load(yearTo+"MLData5", "AnalysisData");
+            MLData5 = MLData5.concat(data5);
+            await save("MLData5",MLData5, function(){}, "replace", "AnalysisData");
+
+            var data10 = await load(yearTo+"MLData10", "AnalysisData");
+            MLData10 = MLData10.concat(data10);
+            await save("MLData10",MLData10, function(){}, "replace", "AnalysisData");
         }
 
         // var years = [2024];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     var toBeEvaluated = true;
-        //     await generateMLRecords(yearTo, toBeEvaluated);
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");
         // }
 
         // var MLData2015 = await load("2015MLData", "AnalysisData");
@@ -1044,14 +1058,105 @@ try{
 
     }
 
+    function calculateAverages5(data) {
+        let result = [];
+    
+        for (let i = 0; i < data.length; i++) {
+            let current = data[i];
+            let newObject = {};
+    
+            if (i === 0) {
+                // For the first object, set all numeric values to 0
+                for (let key in current) {
+                    if (typeof current[key] === 'number') {
+                        newObject[key] = 0;
+                    } else {
+                        newObject[key] = current[key];
+                    }
+                }
+            } else {
+                // For subsequent objects, calculate the averages based on the last 3 objects (including the current one)
+                for (let key in current) {
+                    if (typeof current[key] === 'number') {
+                        let sum = 0;
+                        let count = 0;
+    
+                        // Look back up to the last 5 objects (including the current one)
+                        for (let j = Math.max(0, i - 4); j <= i; j++) {
+                            sum += data[j][key];
+                            count++;
+                        }
+    
+                        newObject[key] = count > 0 ? Math.round(sum / count) : 0;
+                    } else {
+                        newObject[key] = current[key];
+                    }
+                }
+            }
+    
+            result.push(newObject);
+        }
+    
+        return result;
+    }
 
+    function calculateAverages10(data) {
+        let result = [];
+    
+        for (let i = 0; i < data.length; i++) {
+            let current = data[i];
+            let newObject = {};
+    
+            if (i === 0) {
+                // For the first object, set all numeric values to 0
+                for (let key in current) {
+                    if (typeof current[key] === 'number') {
+                        newObject[key] = 0;
+                    } else {
+                        newObject[key] = current[key];
+                    }
+                }
+            } else {
+                // For subsequent objects, calculate the averages based on the last 3 objects (including the current one)
+                for (let key in current) {
+                    if (typeof current[key] === 'number') {
+                        let sum = 0;
+                        let count = 0;
+    
+                        // Look back up to the last 5 objects (including the current one)
+                        for (let j = Math.max(0, i - 9); j <= i; j++) {
+                            sum += data[j][key];
+                            count++;
+                        }
+    
+                        newObject[key] = count > 0 ? Math.round(sum / count) : 0;
+                    } else {
+                        newObject[key] = current[key];
+                    }
+                }
+            }
+    
+            result.push(newObject);
+        }
+    
+        return result;
+    }
 
-    async function generateMLRecords(yearToProcess, toBeEvaluated) {
+    async function generateMLRecords(yearToProcess, toBeEvaluated, averageType = "averageRecords") {
         try {
             if (!toBeEvaluated) {
                 var MLData = []; //await load(yearToProcess+"MLData", "AnalysisData");
             } else {
-                var MLData = await load(yearToProcess + "MLDataToEvaluate", "AnalysisData");
+
+                if (averageType == "averageRecords10") {
+                    var MLData = await load(yearToProcess + "MLDataToEvaluate10", "AnalysisData");
+                }
+                else if (averageType == "averageRecords5") {
+                    var MLData = await load(yearToProcess + "MLDataToEvaluate5", "AnalysisData");
+                }
+                else{
+                    var MLData = await load(yearToProcess + "MLDataToEvaluate", "AnalysisData");
+                }
             }
         }
         catch {
@@ -1087,7 +1192,7 @@ try{
                             try {
                                 gameRecords = await load("gameRecords", "AnalysisData/" + isYear);
                                 gameResults = await load("formatedRecords", "AnalysisData/" + isYear);
-                                averageRecords = await load("averageRecords", "AnalysisData/" + isYear);
+                                averageRecords = await load(averageType, "AnalysisData/" + isYear);
 
                                 var gameRecord = gameRecords.filter(function (item) { return (item.homeTeam == school_name || item.awayTeam == school_name) && item.date == schedule_name });
                                 var opponentName = gameRecord[0].homeTeam == school_name ? gameRecord[0].awayTeam : gameRecord[0].homeTeam;
@@ -1192,10 +1297,26 @@ try{
                                     if (isThere.length == 0) {
                                         MLData.push(MLRecord);
                                         if (!toBeEvaluated) {
-                                            await save(yearToProcess + "MLData", MLData, function () { }, "replace", "AnalysisData");
+                                            if (averageType == "averageRecords5") {
+                                                await save(yearToProcess + "MLData5", MLData, function () { }, "replace", "AnalysisData");
+                                            }
+                                            else if (averageType == "averageRecords10") {
+                                                await save(yearToProcess + "MLData10", MLData, function () { }, "replace", "AnalysisData");
+                                            }
+                                            else {
+                                                await save(yearToProcess + "MLData", MLData, function () { }, "replace", "AnalysisData");
+                                            }
                                         }
                                         else {
-                                            await save(yearToProcess + "MLDataToEvaluate", MLData, function () { }, "replace", "AnalysisData");
+                                            if (averageType == "averageRecords5") {
+                                                await save(yearToProcess + "MLDataToEvaluate5", MLData, function () { }, "replace", "AnalysisData");
+                                            }
+                                            else if (averageType == "averageRecords10") {
+                                                await save(yearToProcess + "MLDataToEvaluate10", MLData, function () { }, "replace", "AnalysisData");
+                                            }
+                                            else {
+                                                await save(yearToProcess + "MLDataToEvaluate", MLData, function () { }, "replace", "AnalysisData");
+                                            }
                                         }
                                     }
                                 }
@@ -1213,6 +1334,9 @@ try{
                         // Get today's date and set the time to 00:00:00 for accurate comparison
                         const today = new Date();
                         today.setHours(0, 0, 0, 0);
+                        const future = new Date();
+                        future.setHours(0, 0, 0, 0);
+                        future.setDate(today.getDate() + 2);
 
                         for (let rat = 0; rat < schedules.length; rat++) {
                             //if (rat >= 25 && rat <= 35) {
@@ -1221,7 +1345,7 @@ try{
                                 const schedule = schedules[rat];
                                 const gameDate = new Date(schedule.date_game);
                                 
-                                if(schedule.date_game != "Date" && (gameDate.toDateString() == today.toDateString()  /* || gameDate < today   */)){
+                                if(schedule.date_game != "Date" && (gameDate.toDateString() == today.toDateString() /*||    gameDate <= future &&  gameDate >= today */ )){
                                 var homePossibleTeam = schedule.box_score_textLink.split(".")[0].slice(-3);
                                 var opponentName = schedule.opp_nameLink.split('/')[2];
                                 school_name = school_name.replace(/\s+/g, '').replace(/\(\d{1,2}\)/, '').replace("_", "");
@@ -1299,7 +1423,7 @@ try{
                                     try {
                                         if (rat == 0) {
                                             var arr = [];
-                                            averageRecords = await load("averageRecords", "AnalysisData/" + (isYear - 1));
+                                            averageRecords = await load(averageType, "AnalysisData/" + (isYear - 1));
                                             var selectedAverage = averageRecords.filter(function (item) { return item.team == home_name });
                                             var selectedAvg = selectedAverage[selectedAverage.length - 1];
 
@@ -1310,7 +1434,7 @@ try{
                                         }
                                         else {
                                             var arr = [];
-                                            averageRecords = await load("averageRecords", "AnalysisData/" + (isYear));
+                                            averageRecords = await load(averageType, "AnalysisData/" + (isYear));
                                             var selectedAverage = averageRecords.filter(function (item) { return item.team == home_name });
                                             var selectedAvg = selectedAverage[selectedAverage.length - 1];
                                             selectedAvg = typeof selectedAvg == "undefined" || selectedAvg == null ? selectedAverage[selectedAverage.length - 1] : selectedAvg;
@@ -1357,7 +1481,7 @@ try{
                                     try {
                                         if (rat == 0) {
                                             var arr = [];
-                                            averageRecords = await load("averageRecords", "AnalysisData/" + (isYear - 1));
+                                            averageRecords = await load(averageType, "AnalysisData/" + (isYear - 1));
                                             var opponentAverage = averageRecords.filter(function (item) { return item.team == away_name });
                                             var opponentAvg = opponentAverage[opponentAverage.length - 1];
                                             if (away_name == "NorfolkState") {
@@ -1370,7 +1494,7 @@ try{
                                         }
                                         else {
                                             var arr = [];
-                                            averageRecords = await load("averageRecords", "AnalysisData/" + (isYear));
+                                            averageRecords = await load(averageType, "AnalysisData/" + (isYear));
                                             var opponentAverage = averageRecords.filter(function (item) { return item.team == away_name });
                                             if (away_name == "NorfolkState") {
                                                 var stopHere = "";
@@ -1439,10 +1563,26 @@ try{
                                         if (isThere.length == 0 /* && !wasProcessed */) {
                                             MLData.push(MLRecord);
                                             if (!toBeEvaluated) {
-                                                await save(yearToProcess + "MLData", MLData, function () { }, "replace", "AnalysisData");
+                                                if (averageType == "averageRecords5") {
+                                                    await save(yearToProcess + "MLData5", MLData, function () { }, "replace", "AnalysisData");
+                                                }
+                                                else if (averageType == "averageRecords10") {
+                                                    await save(yearToProcess + "MLData10", MLData, function () { }, "replace", "AnalysisData");
+                                                }
+                                                else {
+                                                    await save(yearToProcess + "MLData", MLData, function () { }, "replace", "AnalysisData");
+                                                }
                                             }
                                             else {
-                                                await save(yearToProcess + "MLDataToEvaluate", MLData, function () { }, "replace", "AnalysisData");
+                                                if (averageType == "averageRecords5") {
+                                                    await save(yearToProcess + "MLDataToEvaluate5", MLData, function () { }, "replace", "AnalysisData");
+                                                }
+                                                else if (averageType == "averageRecords10") {
+                                                    await save(yearToProcess + "MLDataToEvaluate10", MLData, function () { }, "replace", "AnalysisData");
+                                                }
+                                                else {
+                                                    await save(yearToProcess + "MLDataToEvaluate", MLData, function () { }, "replace", "AnalysisData");
+                                                }
                                             }
                                         }
                                     }
@@ -1566,9 +1706,13 @@ try{
         var data = await load("formatedRecords", "AnalysisData/" + yearToProcess);
         try {
             var averageRecords = await load("averageRecords", "AnalysisData/" + yearToProcess);
+            var averageRecords5 = await load("averageRecords5", "AnalysisData/" + yearToProcess);
+            var averageRecords10 = await load("averageRecords10", "AnalysisData/" + yearToProcess);
         }
         catch {
             var averageRecords = [];
+            var averageRecords5 = [];
+            var averageRecords10 = [];
         }
         var teams = data.map(function (item) {
             return item.team;
@@ -1582,7 +1726,16 @@ try{
             var sortedGames = sortByDate(games);
             var averageGames = calculateAverages(sortedGames);
             averageRecords = averageRecords.concat(averageGames);
+
+            var averageGames5 = calculateAverages5(sortedGames);
+            averageRecords5 = averageRecords5.concat(averageGames5);
+
+            var averageGames10 = calculateAverages10(sortedGames);
+            averageRecords10 = averageRecords10.concat(averageGames10);
+
             await save("averageRecords", averageRecords, function () { }, "replace", "AnalysisData/" + yearToProcess);
+            await save("averageRecords5", averageRecords5, function () { }, "replace", "AnalysisData/" + yearToProcess);
+            await save("averageRecords10", averageRecords10, function () { }, "replace", "AnalysisData/" + yearToProcess);
         }
     }
 
@@ -1959,7 +2112,7 @@ try{
             // await driver.wait(until.elementLocated(By.id(tables[tables.length-1])), // Condition to wait for
             //     3000 // Timeout in milliseconds (10 seconds)
             // );
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, 15000));
             // let loadElement = await driver.wait(until.elementLocated(By.id('team_stats')), 2000);
             // await driver.wait(until.elementIsVisible(loadElement), 2000);
             let tables = await driver.findElements(By.className('stats_table'));
@@ -1968,6 +2121,7 @@ try{
                     //const tableId = tables[ay];
                     let table = tables[ay];
                     let tableId = await table.getAttribute('id');
+                    console.log(tableId);
                     if (tableId == "team_stats" || tableId == "games" || tableId == 'stats' || tableId == 'confs_standings_E' || tableId == "confs_standings_W" || tableId == "line_score" || tableId == "four_factors") {
                         await driver.executeScript(await JSgetTableDetails(tableId)).then(function (return_value) {
                             console.log(return_value);
