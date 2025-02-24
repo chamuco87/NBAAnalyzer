@@ -34,15 +34,17 @@ const { Console } = require('console');
         // }
 
 
-        // var years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        //var years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     var toBeEvaluated = false;
         //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords3");
         //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
         //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");  
         // }
         // var MLData = [];
+        // var MLData3 = [];
         // var MLData5 = [];
         // var MLData10 = [];
         // for (let index = 0; index < years.length; index++) {
@@ -50,6 +52,10 @@ const { Console } = require('console');
         //     var data = await load(yearTo+"MLData", "AnalysisData");
         //     MLData = MLData.concat(data);
         //     await save("MLData",MLData, function(){}, "replace", "AnalysisData");
+
+        //     var data3 = await load(yearTo+"MLData3", "AnalysisData");
+        //     MLData3 = MLData3.concat(data3);
+        //     await save("MLData3",MLData3, function(){}, "replace", "AnalysisData");
 
         //     var data5 = await load(yearTo+"MLData5", "AnalysisData");
         //     MLData5 = MLData5.concat(data5);
@@ -60,14 +66,15 @@ const { Console } = require('console');
         //     await save("MLData10",MLData10, function(){}, "replace", "AnalysisData");
         // }
 
-        // var years = [2024];
-        // for (let index = 0; index < years.length; index++) {
-        //     const yearTo = years[index];
-        //     var toBeEvaluated = true;
-        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords");
-        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
-        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");
-        // }
+        var years = [2024];
+        for (let index = 0; index < years.length; index++) {
+            const yearTo = years[index];
+            var toBeEvaluated = true;
+            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords");
+            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords3");
+            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
+            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");
+        }
 
         // var MLData2015 = await load("2015MLData", "AnalysisData");
         // var MLData2016 = await load("2016MLData", "AnalysisData");
@@ -1100,6 +1107,48 @@ try{
         return result;
     }
 
+    function calculateAverages3(data) {
+        let result = [];
+    
+        for (let i = 0; i < data.length; i++) {
+            let current = data[i];
+            let newObject = {};
+    
+            if (i === 0) {
+                // For the first object, set all numeric values to 0
+                for (let key in current) {
+                    if (typeof current[key] === 'number') {
+                        newObject[key] = 0;
+                    } else {
+                        newObject[key] = current[key];
+                    }
+                }
+            } else {
+                // For subsequent objects, calculate the averages based on the last 3 objects (including the current one)
+                for (let key in current) {
+                    if (typeof current[key] === 'number') {
+                        let sum = 0;
+                        let count = 0;
+    
+                        // Look back up to the last 5 objects (including the current one)
+                        for (let j = Math.max(0, i - 2); j <= i; j++) {
+                            sum += data[j][key];
+                            count++;
+                        }
+    
+                        newObject[key] = count > 0 ? Math.round(sum / count) : 0;
+                    } else {
+                        newObject[key] = current[key];
+                    }
+                }
+            }
+    
+            result.push(newObject);
+        }
+    
+        return result;
+    }
+
     function calculateAverages10(data) {
         let result = [];
     
@@ -1153,6 +1202,8 @@ try{
                 }
                 else if (averageType == "averageRecords5") {
                     var MLData = await load(yearToProcess + "MLDataToEvaluate5", "AnalysisData");
+                }else if (averageType == "averageRecords3") {
+                    var MLData = await load(yearToProcess + "MLDataToEvaluate3", "AnalysisData");
                 }
                 else{
                     var MLData = await load(yearToProcess + "MLDataToEvaluate", "AnalysisData");
@@ -1300,6 +1351,9 @@ try{
                                             if (averageType == "averageRecords5") {
                                                 await save(yearToProcess + "MLData5", MLData, function () { }, "replace", "AnalysisData");
                                             }
+                                            else if (averageType == "averageRecords3") {
+                                                await save(yearToProcess + "MLData3", MLData, function () { }, "replace", "AnalysisData");
+                                            }
                                             else if (averageType == "averageRecords10") {
                                                 await save(yearToProcess + "MLData10", MLData, function () { }, "replace", "AnalysisData");
                                             }
@@ -1310,6 +1364,9 @@ try{
                                         else {
                                             if (averageType == "averageRecords5") {
                                                 await save(yearToProcess + "MLDataToEvaluate5", MLData, function () { }, "replace", "AnalysisData");
+                                            }
+                                            else if (averageType == "averageRecords3") {
+                                                await save(yearToProcess + "MLDataToEvaluate3", MLData, function () { }, "replace", "AnalysisData");
                                             }
                                             else if (averageType == "averageRecords10") {
                                                 await save(yearToProcess + "MLDataToEvaluate10", MLData, function () { }, "replace", "AnalysisData");
@@ -1566,6 +1623,9 @@ try{
                                                 if (averageType == "averageRecords5") {
                                                     await save(yearToProcess + "MLData5", MLData, function () { }, "replace", "AnalysisData");
                                                 }
+                                                else if (averageType == "averageRecords3") {
+                                                    await save(yearToProcess + "MLData3", MLData, function () { }, "replace", "AnalysisData");
+                                                }
                                                 else if (averageType == "averageRecords10") {
                                                     await save(yearToProcess + "MLData10", MLData, function () { }, "replace", "AnalysisData");
                                                 }
@@ -1576,6 +1636,9 @@ try{
                                             else {
                                                 if (averageType == "averageRecords5") {
                                                     await save(yearToProcess + "MLDataToEvaluate5", MLData, function () { }, "replace", "AnalysisData");
+                                                }
+                                                else if (averageType == "averageRecords3") {
+                                                    await save(yearToProcess + "MLDataToEvaluate3", MLData, function () { }, "replace", "AnalysisData");
                                                 }
                                                 else if (averageType == "averageRecords10") {
                                                     await save(yearToProcess + "MLDataToEvaluate10", MLData, function () { }, "replace", "AnalysisData");
@@ -1706,11 +1769,13 @@ try{
         var data = await load("formatedRecords", "AnalysisData/" + yearToProcess);
         try {
             var averageRecords = await load("averageRecords", "AnalysisData/" + yearToProcess);
+            var averageRecords3 = await load("averageRecords3", "AnalysisData/" + yearToProcess);
             var averageRecords5 = await load("averageRecords5", "AnalysisData/" + yearToProcess);
             var averageRecords10 = await load("averageRecords10", "AnalysisData/" + yearToProcess);
         }
         catch {
             var averageRecords = [];
+            var averageRecords3 = [];
             var averageRecords5 = [];
             var averageRecords10 = [];
         }
@@ -1727,6 +1792,9 @@ try{
             var averageGames = calculateAverages(sortedGames);
             averageRecords = averageRecords.concat(averageGames);
 
+            var averageGames3 = calculateAverages3(sortedGames);
+            averageRecords3 = averageRecords3.concat(averageGames3);
+
             var averageGames5 = calculateAverages5(sortedGames);
             averageRecords5 = averageRecords5.concat(averageGames5);
 
@@ -1734,6 +1802,7 @@ try{
             averageRecords10 = averageRecords10.concat(averageGames10);
 
             await save("averageRecords", averageRecords, function () { }, "replace", "AnalysisData/" + yearToProcess);
+            await save("averageRecords3", averageRecords3, function () { }, "replace", "AnalysisData/" + yearToProcess);
             await save("averageRecords5", averageRecords5, function () { }, "replace", "AnalysisData/" + yearToProcess);
             await save("averageRecords10", averageRecords10, function () { }, "replace", "AnalysisData/" + yearToProcess);
         }
