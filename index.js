@@ -23,7 +23,7 @@ const { Console } = require('console');
         //await getTableData("/leagues/" ,"stats", "BaseData");
         //await getSeasonsPerYear();
         //await getSchedulesPerYear();
-        //await getGamesPerYear();
+        await getGamesPerYear();
 
         // var years = [2024];//, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
         // for (let index = 0; index < years.length; index++) {
@@ -34,7 +34,7 @@ const { Console } = require('console');
         // }
 
 
-        //var years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        // var years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     var toBeEvaluated = false;
@@ -66,15 +66,15 @@ const { Console } = require('console');
         //     await save("MLData10",MLData10, function(){}, "replace", "AnalysisData");
         // }
 
-        var years = [2024];
-        for (let index = 0; index < years.length; index++) {
-            const yearTo = years[index];
-            var toBeEvaluated = true;
-            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords");
-            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords3");
-            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
-            await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");
-        }
+        // var years = [2024];
+        // for (let index = 0; index < years.length; index++) {
+        //     const yearTo = years[index];
+        //     var toBeEvaluated = true;
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords3");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
+        //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");
+        // }
 
         // var MLData2015 = await load("2015MLData", "AnalysisData");
         // var MLData2016 = await load("2016MLData", "AnalysisData");
