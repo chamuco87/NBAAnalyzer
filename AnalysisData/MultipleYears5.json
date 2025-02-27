@@ -1,44 +1,233 @@
 [
     {
-        "file": "2024MLData5.json",
+        "file": "2019MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
+        "key": "GSW@ORL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.53
+                    "probability": 0.68
                 },
                 "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5436349392948564
+                    "prediction": 0,
+                    "probability": 0.9508636610513658
                 }
             },
             "isUnder": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.53
+                    "probability": 0.69
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.5216416656190557
+                    "probability": 0.9190640598673949
                 }
             }
         }
     },
     {
-        "file": "2024MLData5.json",
+        "file": "2019MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
+        "key": "CHO@DAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.77
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.9942357001075764
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.36
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.5734556333292885
+                }
+            }
+        }
+    },
+    {
+        "file": "2019MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "DEN@MIL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.56
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.5171523131784646
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.39
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.6267871235734488
+                }
+            }
+        }
+    },
+    {
+        "file": "2019MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "NOP@PHO@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.53
+                    "probability": 0.57
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.6138237069278016
+                    "probability": 0.9065172049902596
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.72
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.9024901460640014
+                }
+            }
+        }
+    },
+    {
+        "file": "2019MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.76
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.7176978684151432
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 2,
+                    "probability": 0.35
+                },
+                "LogisticRegression": {
+                    "prediction": 2,
+                    "probability": 0.5701964002087763
+                }
+            }
+        }
+    },
+    {
+        "file": "2015MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.69
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.9404781391910216
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.6
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.45013805559817344
+                }
+            }
+        }
+    },
+    {
+        "file": "2015MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "CHO@DAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.79
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.9727546650357546
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.51
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.4890483645757146
+                }
+            }
+        }
+    },
+    {
+        "file": "2015MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "DEN@MIL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.56
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.6513886821292164
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.4
+                },
+                "LogisticRegression": {
+                    "prediction": 2,
+                    "probability": 0.869083113544376
+                }
+            }
+        }
+    },
+    {
+        "file": "2015MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "NOP@PHO@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.52
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.6713339692546907
                 }
             },
             "isUnder": {
@@ -48,7 +237,34 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.6766570527069606
+                    "probability": 0.9865548877707965
+                }
+            }
+        }
+    },
+    {
+        "file": "2015MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.61
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.7551797853071543
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.43
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.5404247809782661
                 }
             }
         }
@@ -56,16 +272,340 @@
     {
         "file": "2024MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.8
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.9378326622530074
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.72
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.8781194708517206
+                }
+            }
+        }
+    },
+    {
+        "file": "2024MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "CHO@DAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.78
+                    "probability": 0.86
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.832058243599268
+                    "probability": 0.9881963652179027
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.49
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.7938306540900988
+                }
+            }
+        }
+    },
+    {
+        "file": "2024MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "DEN@MIL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.59
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.818918969675527
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.55
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.5292258020738282
+                }
+            }
+        }
+    },
+    {
+        "file": "2024MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "NOP@PHO@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.69
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.682523289267917
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.66
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.5184631035330417
+                }
+            }
+        }
+    },
+    {
+        "file": "2024MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.6
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.740855201587033
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.48
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.4430600496277757
+                }
+            }
+        }
+    },
+    {
+        "file": "MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.61
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.9221027514161478
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.63
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.8997766473876888
+                }
+            }
+        }
+    },
+    {
+        "file": "MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "CHO@DAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.88
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.9804498752671341
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.58
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.4773153465327546
+                }
+            }
+        }
+    },
+    {
+        "file": "MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "DEN@MIL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.5
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.588802405509697
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.53
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.6397189874847692
+                }
+            }
+        }
+    },
+    {
+        "file": "MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "NOP@PHO@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.58
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.7464304793144789
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.69
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.8761352969540196
+                }
+            }
+        }
+    },
+    {
+        "file": "MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.71
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.76034405221594
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.41
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.42129581514746817
+                }
+            }
+        }
+    },
+    {
+        "file": "2016MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.66
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.8963439786100602
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.54
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.5020005673542096
+                }
+            }
+        }
+    },
+    {
+        "file": "2016MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "CHO@DAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.8
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.9631171615114756
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.44
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.5099331108567532
+                }
+            }
+        }
+    },
+    {
+        "file": "2016MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "DEN@MIL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.7
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.54456126808787
                 }
             },
             "isUnder": {
@@ -75,132 +615,240 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.7219766963056427
+                    "probability": 0.3926478708902582
                 }
             }
         }
     },
     {
-        "file": "2024MLData5.json",
+        "file": "2016MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
+        "key": "NOP@PHO@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.68
+                    "probability": 0.54
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.7993363965161567
+                    "probability": 0.7784030134247578
                 }
             },
             "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.59
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.8719265980072688
+                }
+            }
+        }
+    },
+    {
+        "file": "2016MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.71
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.8888414538935725
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.42
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.8594331866017092
+                }
+            }
+        }
+    },
+    {
+        "file": "2022MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.5
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.7391377244269444
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.64
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.8326194505022455
+                }
+            }
+        }
+    },
+    {
+        "file": "2022MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "CHO@DAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.87
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.9944320507338407
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.37
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.572360248179334
+                }
+            }
+        }
+    },
+    {
+        "file": "2022MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "DEN@MIL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
                     "probability": 0.59
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.6105728153747462
-                }
-            }
-        }
-    },
-    {
-        "file": "2024MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5695594006684895
+                    "probability": 0.5409087795801779
                 }
             },
             "isUnder": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.5
+                    "probability": 0.42
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.40974679208687886
+                    "probability": 0.4605586615420507
                 }
             }
         }
     },
     {
-        "file": "2024MLData5.json",
+        "file": "2022MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
+        "key": "NOP@PHO@2025_02_27",
         "predictions": {
             "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.55
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.6052002559933797
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.67
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.7165415968162264
+                }
+            }
+        }
+    },
+    {
+        "file": "2022MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.64
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.5484961610983367
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.45
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.45475902135962515
+                }
+            }
+        }
+    },
+    {
+        "file": "2017MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.63
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.8696913338649304
+                }
+            },
+            "isUnder": {
                 "RandomForest": {
                     "prediction": 1,
                     "probability": 0.7
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.8980029198324458
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.78
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9321365575525588
+                    "probability": 0.852044117021882
                 }
             }
         }
     },
     {
-        "file": "2024MLData5.json",
+        "file": "2017MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.58
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8417786604017445
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.5
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5493016147732028
-                }
-            }
-        }
-    },
-    {
-        "file": "2024MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
+        "key": "CHO@DAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.85
+                    "probability": 0.75
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.8858324044725776
+                    "probability": 0.9842272859643336
                 }
             },
             "isUnder": {
@@ -210,51 +858,159 @@
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.5837190554581011
+                    "probability": 0.3683296947880553
                 }
             }
         }
     },
     {
-        "file": "2024MLData5.json",
+        "file": "2017MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
+        "key": "DEN@MIL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.59
+                    "probability": 0.57
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.7382134423448921
+                    "probability": 0.6570592193093779
                 }
             },
             "isUnder": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.71
+                    "probability": 0.48
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.9367874123774993
+                    "probability": 0.7896740600446438
                 }
             }
         }
     },
     {
-        "file": "MLData5.json",
+        "file": "2017MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
+        "key": "NOP@PHO@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.54
+                    "probability": 0.65
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.9621248983355376
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.64
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.880211877871909
+                }
+            }
+        }
+    },
+    {
+        "file": "2017MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.65
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.6469317295598644
+                    "probability": 0.703862278103761
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.39
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.41676460528529313
+                }
+            }
+        }
+    },
+    {
+        "file": "2023MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.55
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.798216803184926
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.53
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.947031297969176
+                }
+            }
+        }
+    },
+    {
+        "file": "2023MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "CHO@DAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.79
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.9806175602280285
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.57
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.6545880425587893
+                }
+            }
+        }
+    },
+    {
+        "file": "2023MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "DEN@MIL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.52
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.7358803317911898
                 }
             },
             "isUnder": {
@@ -264,159 +1020,24 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.39473266690373676
+                    "probability": 0.564437604436047
                 }
             }
         }
     },
     {
-        "file": "MLData5.json",
+        "file": "2023MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
+        "key": "NOP@PHO@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.53
+                    "probability": 0.7
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.6186430023443179
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.44
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6925516026037931
-                }
-            }
-        }
-    },
-    {
-        "file": "MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.64
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5877544935457053
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.45
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7635678044686119
-                }
-            }
-        }
-    },
-    {
-        "file": "MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.61
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6017075126250757
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.57
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5529667605242591
-                }
-            }
-        }
-    },
-    {
-        "file": "MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5937933759752181
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.59
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.528379183863785
-                }
-            }
-        }
-    },
-    {
-        "file": "MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.75
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8028066117809912
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.67
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8550798490279908
-                }
-            }
-        }
-    },
-    {
-        "file": "MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.56
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6520263114148406
+                    "probability": 0.8578223077696726
                 }
             },
             "isUnder": {
@@ -426,1014 +1047,96 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.7326895892939849
+                    "probability": 0.6557742679935762
                 }
             }
         }
     },
     {
-        "file": "MLData5.json",
+        "file": "2023MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
+        "key": "MIN@LAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.8
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8165937070407345
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.46
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5609057987372086
-                }
-            }
-        }
-    },
-    {
-        "file": "MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.56
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.783844355844093
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.71
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9184222114239178
-                }
-            }
-        }
-    },
-    {
-        "file": "2017MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.53
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.716196531883277
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.4
-                },
-                "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.43451667012887313
-                }
-            }
-        }
-    },
-    {
-        "file": "2017MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.63
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.643141012987918
-                }
-            },
-            "isUnder": {
                 "RandomForest": {
                     "prediction": 0,
                     "probability": 0.55
                 },
                 "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.5828208071997505
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.43
+                },
+                "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.6944798730856905
+                    "probability": 0.6644004673189495
                 }
             }
         }
     },
     {
-        "file": "2017MLData5.json",
+        "file": "2018MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
+        "key": "GSW@ORL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
-                    "prediction": 1,
+                    "prediction": 0,
                     "probability": 0.67
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.5096052061724456
+                    "probability": 0.9269089388668563
                 }
             },
             "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.49
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5604482342393631
-                }
-            }
-        }
-    },
-    {
-        "file": "2017MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5342509554512356
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.48
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.4624073056106826
-                }
-            }
-        }
-    },
-    {
-        "file": "2017MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6502066454033918
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.53
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8035738677626234
-                }
-            }
-        }
-    },
-    {
-        "file": "2017MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.66
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.890708793091338
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.62
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9640712910041789
-                }
-            }
-        }
-    },
-    {
-        "file": "2017MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8839548020775246
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.6
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7770168776379475
-                }
-            }
-        }
-    },
-    {
-        "file": "2017MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
                     "probability": 0.7
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.8876408114211767
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.3813117510166867
+                    "probability": 0.8692388549608849
                 }
             }
         }
     },
     {
-        "file": "2017MLData5.json",
+        "file": "2018MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
+        "key": "CHO@DAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.64
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9350086189346415
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.6
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9336437034524661
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.53
+                    "prediction": 1,
+                    "probability": 0.89
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.6215463284964615
+                    "probability": 0.9464464508029665
                 }
             },
             "isUnder": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.36
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5095674817093427
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5307660029603534
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.4
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.590568298806221
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.56
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6995031757731024
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.48
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7763455420975286
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.59
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8767516785930746
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.5
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8575094011794883
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.67
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5214237273532536
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.48
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5843862616020659
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.61
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6606779392885253
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.54
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8197825388071901
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.67
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7127700282854941
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.47
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.769217655496191
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.82
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.9072044479619732
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5152198067070456
-                }
-            }
-        }
-    },
-    {
-        "file": "2019MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.64
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6477700803859221
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.86
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9772887621884823
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.56
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6181549529297106
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
                     "probability": 0.45
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.477735365540135
+                    "probability": 0.5124808886689275
                 }
             }
         }
     },
     {
-        "file": "2022MLData5.json",
+        "file": "2018MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6922656387686266
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.53
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.48203252624218357
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5050168075386193
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.59
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7862053705601616
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.61
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6927851730938263
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.59
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8937533667918768
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.67
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5863914516269412
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.564190690333741
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.77
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8770261017394531
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.76
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.710890886600937
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.53
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6885039605941241
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.6
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5381621340254888
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.69
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.7171792284810048
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.39
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5996962127152292
-                }
-            }
-        }
-    },
-    {
-        "file": "2022MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.62
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8519495506473794
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.7
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5702589192754104
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.7925139864566477
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.53
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6475856273242303
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.58
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6613653499528588
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.4
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5269974208411269
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.63
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.7986331159256358
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.5
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7370138895182666
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.53
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9026437054413448
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.44
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6467496662285099
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.71
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9346954789641551
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.54
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.4244811571074932
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.74
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6701307685790457
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9284200676362667
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.6
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6710545851252665
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7607145340352691
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.7
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.7387834900206535
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.6454882229900903
-                }
-            }
-        }
-    },
-    {
-        "file": "2020MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
+        "key": "DEN@MIL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
@@ -1442,61 +1145,7 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.5180361454155978
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.76
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9287396729035399
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.54
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6716004931842884
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.39
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5060354671065724
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.57
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7035675350522209
+                    "probability": 0.7148238270126595
                 }
             },
             "isUnder": {
@@ -1506,196 +1155,7 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.48341620480030795
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.7
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6906888216532465
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.46
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.710717909638276
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.61
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6892255516940518
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.49
-                },
-                "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.4832643005673192
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5367629020180719
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8551593520868856
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.57
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8292137308363556
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.62
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9430152428008783
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6031757038860049
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.49
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7871547221573888
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.76
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.7868126521240666
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.45793272085553993
-                }
-            }
-        }
-    },
-    {
-        "file": "2016MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.61
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5292202092186196
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7297011012460172
+                    "probability": 0.7643321136041407
                 }
             }
         }
@@ -1703,7 +1163,34 @@
     {
         "file": "2018MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
+        "key": "NOP@PHO@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.55
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.7024871273541873
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.76
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.8889523611030258
+                }
+            }
+        }
+    },
+    {
+        "file": "2018MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
@@ -1712,476 +1199,17 @@
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.9002304545642493
+                    "probability": 0.8302894868415839
                 }
             },
             "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.4
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.43944756207172586
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.58
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8532247844292524
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7030498031236707
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.66
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6305830202898333
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
                     "probability": 0.41
                 },
                 "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6031777669672783
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.57
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5131752850601324
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.58
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.3589327460320967
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.58
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6805054633353271
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.4915484447939174
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.74
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6764083350354579
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9277984657442233
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.58
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5816848932845953
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.6
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7692788293350544
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.77
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8291435013593191
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.54
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.7720364580884581
-                }
-            }
-        }
-    },
-    {
-        "file": "2018MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.64
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.617085170407886
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.63
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9782409488514274
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.56
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5044036464842883
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.45
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6702473971995957
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.59
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.526230277165536
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.41
-                },
-                "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.4397634741578088
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.63
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6291310069285851
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.42
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.42451341056782826
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.57
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7095513493136953
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.58
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.38087028059371486
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.54
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5264199299617287
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.59
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.47987537245765904
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.67
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.7340140175377444
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.69
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9318789367880689
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.59
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5176938247727938
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.45
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8508671280461128
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.7
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.9365340008880333
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.6
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8720120845912258
-                }
-            }
-        }
-    },
-    {
-        "file": "2023MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7578274271698827
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.75
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8276707087612996
+                    "probability": 0.5574307288483028
                 }
             }
         }
@@ -2189,34 +1217,7 @@
     {
         "file": "2021MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.53
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8395539660733624
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.49
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.5345500572936808
-                }
-            }
-        }
-    },
-    {
-        "file": "2021MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
+        "key": "GSW@ORL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
@@ -2225,17 +1226,17 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.8285876449914448
+                    "probability": 0.937727021437716
                 }
             },
             "isUnder": {
                 "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.49
+                    "prediction": 1,
+                    "probability": 0.68
                 },
                 "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.791844617598414
+                    "prediction": 1,
+                    "probability": 0.8409879650943827
                 }
             }
         }
@@ -2243,26 +1244,26 @@
     {
         "file": "2021MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
+        "key": "CHO@DAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.61
+                    "probability": 0.73
                 },
                 "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7005859078343072
+                    "prediction": 1,
+                    "probability": 0.9373095437631763
                 }
             },
             "isUnder": {
                 "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.51
+                    "prediction": 1,
+                    "probability": 0.45
                 },
                 "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.7832148299335883
+                    "prediction": 1,
+                    "probability": 0.46719353168065253
                 }
             }
         }
@@ -2270,232 +1271,16 @@
     {
         "file": "2021MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
+        "key": "DEN@MIL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.54
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.583910446378638
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.57
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.4730116822001541
-                }
-            }
-        }
-    },
-    {
-        "file": "2021MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5465112024358494
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8901851143496271
-                }
-            }
-        }
-    },
-    {
-        "file": "2021MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.55
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.6998586790016559
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.66
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9056110616783912
-                }
-            }
-        }
-    },
-    {
-        "file": "2021MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6052376353632993
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.8512949104209491
-                }
-            }
-        }
-    },
-    {
-        "file": "2021MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.63
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5792429652520334
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.52
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.48255007411462963
-                }
-            }
-        }
-    },
-    {
-        "file": "2021MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.51
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6916158795698717
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.74
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.9745628004406492
-                }
-            }
-        }
-    },
-    {
-        "file": "2015MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "BOS@DET@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.56
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8301642436776594
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.42
-                },
-                "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.603330166812648
-                }
-            }
-        }
-    },
-    {
-        "file": "2015MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "ATL@MIA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.54
-                },
-                "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6373481937118318
-                }
-            },
-            "isUnder": {
                 "RandomForest": {
                     "prediction": 0,
                     "probability": 0.5
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.9674962773149947
-                }
-            }
-        }
-    },
-    {
-        "file": "2015MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "PHI@NYK@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.76
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.9570430525448733
+                    "probability": 0.6495238853244757
                 }
             },
             "isUnder": {
@@ -2505,24 +1290,78 @@
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.9886809275053611
+                    "probability": 0.6534276958643713
                 }
             }
         }
     },
     {
-        "file": "2015MLData5.json",
+        "file": "2021MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "OKC@BRK@2025_02_26",
+        "key": "NOP@PHO@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.53
+                    "probability": 0.5
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.6521515338112889
+                    "probability": 0.6839361748559605
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.68
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.6945874449431129
+                }
+            }
+        }
+    },
+    {
+        "file": "2021MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "MIN@LAL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 1,
+                    "probability": 0.56
+                },
+                "LogisticRegression": {
+                    "prediction": 1,
+                    "probability": 0.8362160882734296
+                }
+            },
+            "isUnder": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.44
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.7068815055762864
+                }
+            }
+        }
+    },
+    {
+        "file": "2020MLData5.json",
+        "evaluated_file": "2024MLDataToEvaluate5.json",
+        "key": "GSW@ORL@2025_02_27",
+        "predictions": {
+            "isHomeWinner": {
+                "RandomForest": {
+                    "prediction": 0,
+                    "probability": 0.69
+                },
+                "LogisticRegression": {
+                    "prediction": 0,
+                    "probability": 0.9682791427579904
                 }
             },
             "isUnder": {
@@ -2531,143 +1370,116 @@
                     "probability": 0.55
                 },
                 "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.5506536859687
+                    "prediction": 1,
+                    "probability": 0.791274866380009
                 }
             }
         }
     },
     {
-        "file": "2015MLData5.json",
+        "file": "2020MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "LAC@CHI@2025_02_26",
+        "key": "CHO@DAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.57
+                    "prediction": 1,
+                    "probability": 0.79
                 },
                 "LogisticRegression": {
-                    "prediction": 0,
-                    "probability": 0.6598889103681398
+                    "prediction": 1,
+                    "probability": 0.9721942412628509
                 }
             },
             "isUnder": {
                 "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.41
+                    "prediction": 1,
+                    "probability": 0.45
                 },
                 "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.5624233795697196
+                    "prediction": 1,
+                    "probability": 0.5808856155292823
                 }
             }
         }
     },
     {
-        "file": "2015MLData5.json",
+        "file": "2020MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "TOR@IND@2025_02_26",
+        "key": "DEN@MIL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.55
+                    "probability": 0.61
                 },
                 "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.8958199534998754
+                    "prediction": 0,
+                    "probability": 0.8047887309468215
                 }
             },
             "isUnder": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.48
+                    "probability": 0.42
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.9487817038502739
+                    "probability": 0.7125300851325423
                 }
             }
         }
     },
     {
-        "file": "2015MLData5.json",
+        "file": "2020MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "POR@WAS@2025_02_26",
+        "key": "NOP@PHO@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.58
+                    "probability": 0.61
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.609251988977108
+                    "probability": 0.8853901737959105
                 }
             },
             "isUnder": {
                 "RandomForest": {
                     "prediction": 0,
-                    "probability": 0.46
+                    "probability": 0.67
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.9008586720520676
+                    "probability": 0.9502786336370042
                 }
             }
         }
     },
     {
-        "file": "2015MLData5.json",
+        "file": "2020MLData5.json",
         "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAS@HOU@2025_02_26",
+        "key": "MIN@LAL@2025_02_27",
         "predictions": {
             "isHomeWinner": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.71
+                    "probability": 0.63
                 },
                 "LogisticRegression": {
                     "prediction": 1,
-                    "probability": 0.8530556472120941
+                    "probability": 0.814490870289438
                 }
             },
             "isUnder": {
                 "RandomForest": {
                     "prediction": 1,
-                    "probability": 0.43
-                },
-                "LogisticRegression": {
-                    "prediction": 2,
-                    "probability": 0.4953929714360215
-                }
-            }
-        }
-    },
-    {
-        "file": "2015MLData5.json",
-        "evaluated_file": "2024MLDataToEvaluate5.json",
-        "key": "SAC@UTA@2025_02_26",
-        "predictions": {
-            "isHomeWinner": {
-                "RandomForest": {
-                    "prediction": 1,
-                    "probability": 0.65
-                },
-                "LogisticRegression": {
-                    "prediction": 1,
-                    "probability": 0.5232752235272895
-                }
-            },
-            "isUnder": {
-                "RandomForest": {
-                    "prediction": 0,
-                    "probability": 0.52
+                    "probability": 0.51
                 },
                 "LogisticRegression": {
                     "prediction": 0,
-                    "probability": 0.873531259750572
+                    "probability": 0.486216315194798
                 }
             }
         }
