@@ -23,7 +23,7 @@ const { Console } = require('console');
         //await getTableData("/leagues/" ,"stats", "BaseData");
         //await getSeasonsPerYear();
         //await getSchedulesPerYear();
-        //await getGamesPerYear();
+        await getGamesPerYear();
 
         // var years = [2024];//, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];//[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999];
         // for (let index = 0; index < years.length; index++) {
@@ -34,7 +34,7 @@ const { Console } = require('console');
         // }
 
 
-        var years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        //var years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
         // for (let index = 0; index < years.length; index++) {
         //     const yearTo = years[index];
         //     var toBeEvaluated = false;
@@ -43,28 +43,28 @@ const { Console } = require('console');
         //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords5");
         //     await generateMLRecords(yearTo, toBeEvaluated, "averageRecords10");  
         // }
-        var MLData = [];
-        var MLData3 = [];
-        var MLData5 = [];
-        var MLData10 = [];
-        for (let index = 0; index < years.length; index++) {
-            const yearTo = years[index];
-            var data = await load(yearTo+"MLData", "AnalysisData");
-            MLData = MLData.concat(data);
-            await save("MLData",MLData, function(){}, "replace", "AnalysisData");
+        // var MLData = [];
+        // var MLData3 = [];
+        // var MLData5 = [];
+        // var MLData10 = [];
+        // for (let index = 0; index < years.length; index++) {
+        //     const yearTo = years[index];
+        //     var data = await load(yearTo+"MLData", "AnalysisData");
+        //     MLData = MLData.concat(data);
+        //     await save("MLData",MLData, function(){}, "replace", "AnalysisData");
 
-            var data3 = await load(yearTo+"MLData3", "AnalysisData");
-            MLData3 = MLData3.concat(data3);
-            await save("MLData3",MLData3, function(){}, "replace", "AnalysisData");
+        //     var data3 = await load(yearTo+"MLData3", "AnalysisData");
+        //     MLData3 = MLData3.concat(data3);
+        //     await save("MLData3",MLData3, function(){}, "replace", "AnalysisData");
 
-            var data5 = await load(yearTo+"MLData5", "AnalysisData");
-            MLData5 = MLData5.concat(data5);
-            await save("MLData5",MLData5, function(){}, "replace", "AnalysisData");
+        //     var data5 = await load(yearTo+"MLData5", "AnalysisData");
+        //     MLData5 = MLData5.concat(data5);
+        //     await save("MLData5",MLData5, function(){}, "replace", "AnalysisData");
 
-            var data10 = await load(yearTo+"MLData10", "AnalysisData");
-            MLData10 = MLData10.concat(data10);
-            await save("MLData10",MLData10, function(){}, "replace", "AnalysisData");
-        }
+        //     var data10 = await load(yearTo+"MLData10", "AnalysisData");
+        //     MLData10 = MLData10.concat(data10);
+        //     await save("MLData10",MLData10, function(){}, "replace", "AnalysisData");
+        // }
 
         // var years = [2024];
         // for (let index = 0; index < years.length; index++) {
